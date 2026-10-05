@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rehabilitation App — Riley Fang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&amp;family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;}
+body{margin:0;background:#f5f4f0;color:#1c1d22;font-family:'Figtree',sans-serif;-webkit-font-smoothing:antialiased;}
+a{color:#4a5d94;}
+a:hover{color:#1c1d22;}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;">
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,244,240,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(28,29,34,.08);">
+    <div style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <a href="index.html" style="font-family:'Caveat',cursive;font-weight:500;font-size:28px;line-height:1;text-decoration:none;color:#1c1d22;">← Riley Fang</a>
+      <nav style="display:flex;gap:clamp(12px,2.5vw,28px);font-family:'Courier Prime',monospace;font-size:15px;flex-wrap:wrap;">
+        <a href="rehabilitation.html" style="text-decoration:underline;text-underline-offset:5px;color:#1c1d22;">Rehab App</a>
+        <a href="cseed.html" style="text-decoration:none;color:#1c1d22;">CSEED</a>
+        <a href="flavor-fingerprint.html" style="text-decoration:none;color:#1c1d22;">Flavor Fingerprint</a>
+      </nav>
+    </div>
+  </header>
+  <div style="height:64px;"></div>
+
+  <section data-screen-label="Hero" style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px) 0;">
+    <div style="font-family:'Courier Prime',monospace;font-size:15px;color:#4a5d94;">UX research &amp; design</div>
+    <h1 style="font-weight:700;font-size:clamp(48px,8vw,112px);line-height:.95;letter-spacing:-.02em;margin:18px 0 0;color:#5b6fa8;">Rehabilitation App</h1>
+    <p style="font-size:clamp(19px,1.8vw,24px);line-height:1.5;max-width:36em;margin:28px 0 0;text-wrap:pretty;">A dual-interface app for clinicians and patients. It bridges the two sides and lets patients do rehabilitation training remotely, with XREAL checking each movement.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:24px;margin-top:48px;padding-top:28px;border-top:1px solid rgba(28,29,34,.15);">
+      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Role</div><div style="font-size:17px;margin-top:6px;">UX research &amp; design</div></div>
+      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Lab</div><div style="font-size:17px;margin-top:6px;">HMER Lab<br>Human-in-Mind Engineering Research</div></div>
+      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Guidance</div><div style="font-size:17px;margin-top:6px;">Hanna Choi &amp; Dr. Jeong</div></div>
+      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Platform</div><div style="font-size:17px;margin-top:6px;">iOS app + XREAL glasses</div></div>
+    </div>
+    <div style="display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin-top:64px;padding:clamp(32px,5vw,64px) 16px;background:#5b6fa8;border-radius:20px;flex-wrap:wrap;">
+      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img src="assets/rehab/p-home.png" alt="Patient home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);"><img src="assets/rehab/c-home.png" alt="Clinician home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img src="assets/rehab/p-report.png" alt="Patient report" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+    </div>
+  </section>
+
+  <section data-screen-label="Overview" style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 64px;">
+    <div>
+      <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 0;">What is this app</h2>
+    </div>
+    <div style="grid-column:span 2;display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.65;max-width:38em;">
+      <p style="margin:0;">This is a dual-interface app for both <strong>clinicians and patients</strong>, serving as a bridge to facilitate communication between them and enabling patients to perform rehabilitation training <strong>remotely</strong>.</p>
+      <p style="margin:0;">It aims to increase patient motivation during recovery, thereby improving recovery rates. We use <strong>XREAL</strong> to detect whether the patient’s movements are performed correctly.</p>
+    </div>
+  </section>
+
+  <section data-screen-label="Dashboards" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(20px,4vw,48px) 0;">
+    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 32px;">Two dashboards, one app</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;">
+      <div style="background:#fff;border-radius:16px;padding:28px;">
+        <div style="display:flex;align-items:center;gap:10px;"><span style="background:#dfe5f2;color:#3f5288;font-size:13px;font-weight:600;padding:4px 10px;border-radius:6px;">PATIENT</span><span style="font-weight:600;font-size:20px;">Dashboard</span></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;">
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Home</span>
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Rehab</span>
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Report</span>
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Profile</span>
+        </div>
+      </div>
+      <div style="background:#fff;border-radius:16px;padding:28px;">
+        <div style="display:flex;align-items:center;gap:10px;"><span style="background:#3f5288;color:#fff;font-size:13px;font-weight:600;padding:4px 10px;border-radius:6px;">CLINICIAN</span><span style="font-weight:600;font-size:20px;">Dashboard</span></div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;">
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Home</span>
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Message</span>
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Insight</span>
+          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Profile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="Patient — Game flow" style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px) 0;">
+    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 12px;">Game flow</h2>
+    <p style="font-size:18px;line-height:1.6;max-width:36em;margin:0 0 32px;">How a patient moves from the play button into a Lemon Squeeze session.</p>
+    <div style="background:#dfe5f2;border-radius:20px;padding:clamp(20px,3vw,40px);font-size:14px;overflow-x:auto;">
+      <div style="display:grid;grid-template-columns:auto auto;column-gap:8px;row-gap:6px;align-items:center;width:max-content;margin:0 auto;">
+        <div style="display:flex;align-items:center;gap:8px;justify-self:end;"><span style="background:#3f5288;color:#fff;padding:9px 14px;border-radius:999px;font-weight:600;white-space:nowrap;flex:none;">▶ Play button</span><span style="color:#5b6fa8;font-size:16px;flex:none;">→</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Game description / instruction</span><span style="color:#5b6fa8;font-size:16px;flex:none;">→</span></div>
+        <div style="justify-self:center;"><span style="display:inline-block;background:#5b6fa8;color:#fff;padding:9px 14px;border-radius:8px;font-weight:600;white-space:nowrap;">◆ Mode select</span></div>
+        <div></div>
+        <div style="justify-self:center;color:#5b6fa8;font-size:16px;line-height:1;">↓</div>
+        <div style="display:flex;align-items:center;gap:8px;justify-self:end;"><span style="background:#3f5288;color:#fff;padding:9px 14px;border-radius:999px;font-weight:600;white-space:nowrap;flex:none;">End</span><span style="color:#5b6fa8;font-size:16px;flex:none;">←</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Select feedback</span><span style="color:#5b6fa8;font-size:16px;flex:none;">←</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Start playing</span><span style="color:#5b6fa8;font-size:16px;flex:none;">←</span></div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-left:2px solid #5b6fa8;border-right:2px solid #5b6fa8;border-radius:8px;padding:8px 12px;">
+          <span style="display:flex;gap:8px;align-items:center;"><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Practice</span><span style="color:#5b6fa8;font-size:16px;flex:none;">→</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Set your own goal</span></span>
+          <span style="display:flex;gap:8px;align-items:center;"><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Recommend</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+    <section data-screen-label="Patient screen" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 0;">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
+        <div style="flex:1 1 360px;min-width:0;">
+          
+          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Home</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Home</div>
+            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Goal achievement</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Completion rate (%) · Progress ring · 3 of 5 goals today</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Today’s programme</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Lemon game at different difficulty levels · Opens the exercise instruction page</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">You are getting stronger</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Left / right hand · Score in points · Weekly change (%)</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">This week</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Current streak · Best streak</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Clinician message</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Latest note · Open conversation</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
+          
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-home.png" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section data-screen-label="Patient screen" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 0;">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
+        <div style="flex:1 1 360px;min-width:0;">
+          
+          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Rehabilitation</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Rehabilitation</div>
+            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Ranking &amp; achievement</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Streak / badges · Weekly leaderboard · Goal progress bars</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Goal &amp; feedback tiles</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">3 of 5 today · 1 new clinician note</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Training · Lemon Squeeze</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Demo video · Description · Benefits · Step-by-step instructions</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
+          
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-rehab.png" alt="Rehabilitation screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section data-screen-label="Patient screen" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 0;">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
+        <div style="flex:1 1 360px;min-width:0;">
+          
+          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Report</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Report</div>
+            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Latest data</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Main metric (points) · Left / right hand toggle · Target range 60–80</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Improvement threshold</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Trend line · On-track indicator</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">History</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Week, month, 3 months · Bar chart</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Other</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Personal best · Avg score this week · Total squeezes</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Share</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Email · PDF · Clinician portal · Copy summary link</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
+          
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-report.png" alt="Report screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          
+        </div>
+      </div>
+    </section>
+  
+
+  <section data-screen-label="Clinician side intro" style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 0;">
+    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 0;">Tools for the care team</h2>
+  </section>
+
+  
+    <section data-screen-label="Clinician screen" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 0;">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
+        <div style="flex:1 1 360px;min-width:0;">
+          
+          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Home</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Home</div>
+            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Patient roster</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Condition and affected hand · Last activity and goal % · Send reminder</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Search bar / filter</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">By name · By condition · By affected hand</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Today (task queue)</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">3 tasks · Jump to patient or chat</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Patient reports</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">All patients · Reps, streak, goal</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Patient detail</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Overview: weekly goal ring, avg + peak score, session history · Trends: grip score line, pain level over time, performance vs. baseline · Notes: clinical notes, add note · Record: patient info</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
+          
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-home.png" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section data-screen-label="Clinician screen" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 0;">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
+        <div style="flex:1 1 360px;min-width:0;">
+          
+          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Message</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Message</div>
+            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Plan builder</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Quick presets · Easy / Regular / Hard · Squeeze count, peak %, target score · Publish plan</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Conversation list</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Unread markers · Search by name or text</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Chat box</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Threaded conversation · Quick replies: six canned clinical responses · Set goal: opens the plan builder</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
+          
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-message.png" alt="Message screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          
+        </div>
+      </div>
+    </section>
+  
+    <section data-screen-label="Clinician screen" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 0;">
+      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
+        <div style="flex:1 1 360px;min-width:0;">
+          
+          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Insight</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Insight</div>
+            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">All patients’ information</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Active patients · Avg goal completion · Avg streak · Sessions this week</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Score bar graph</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Cohort average, points</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Completion rate</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Weekly compliance line</div>
+                </div>
+              
+                <div style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
+                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Performance detail</div>
+                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">By treatment category · Patients, adherence, change</div>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
+          
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-insight.png" alt="Insight screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+          
+        </div>
+      </div>
+    </section>
+  
+
+  <section data-screen-label="Profiles" style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px) 0;">
+    
+    <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 12px;">Profile</h3>
+    <p style="font-size:18px;line-height:1.6;max-width:36em;margin:0;">Patients see their recovery stats and pair their XREAL glasses; clinicians see license details, an audit log and their clinical obligations.</p>
+    <div style="display:flex;justify-content:center;gap:clamp(20px,5vw,72px);flex-wrap:wrap;margin-top:40px;">
+      <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-profile.png" alt="Patient profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <figcaption style="font-family:'Courier Prime',monospace;font-size:14px;">Patient</figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;">
+        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-profile.png" alt="Clinician profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <figcaption style="font-family:'Courier Prime',monospace;font-size:14px;">Clinician</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section data-screen-label="Where two sides connect" style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 0;">
+    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 32px;">Where two sides connect</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;">
+      
+        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
+            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">PATIENT</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">CLINICIAN</span>
+          </div>
+          <div style="font-weight:600;font-size:20px;">Session results</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">Completing a session sends squeezes, peak %, points and the difficulty rating into the patient’s record and session history.</p>
+        </div>
+      
+        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
+            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">CLINICIAN</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">PATIENT</span>
+          </div>
+          <div style="font-weight:600;font-size:20px;">Prescribed plan</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">Publishing a plan sets the level and targets that the patient’s Recommended mode runs against.</p>
+        </div>
+      
+        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
+            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">BOTH</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">BOTH</span>
+          </div>
+          <div style="font-weight:600;font-size:20px;">Messaging</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">One thread: the patient writes in Clinician feedback, the clinician answers from Messages, optionally via quick replies.</p>
+        </div>
+      
+        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
+            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">CLINICIAN</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">PATIENT</span>
+          </div>
+          <div style="font-weight:600;font-size:20px;">Reminders &amp; notes</div>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">Send reminder nudges the patient to train; clinical notes stay on the clinician side and shape the next plan.</p>
+        </div>
+      
+    </div>
+  </section>
+
+  <section data-screen-label="Key findings" style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 0;">
+    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 28px;">Key findings after testing</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;align-items:stretch;">
+      <div style="display:flex;flex-direction:column;gap:24px;background:#dfe5f2;border-radius:20px;padding:clamp(20px,3vw,36px);">
+        <div style="min-width:0;">
+          <div style="font-family:'Courier Prime',monospace;color:#5b6fa8;font-size:20px;font-weight:700;">01</div>
+          <div style="font-weight:600;font-size:22px;line-height:1.3;margin-top:8px;">Report charts needed more explanation</div>
+          <p style="margin:10px 0 0;font-size:16px;line-height:1.6;color:#3b3d45;">Testers weren’t sure how to read the trend line and history bars, so each chart now has a “What this shows” panel.</p>
+        </div>
+        <div style="flex:1;min-width:0;display:flex;gap:12px;">
+          <figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
+            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img src="assets/rehab/f-threshold.png" alt="Improvement threshold chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
+            <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">Improvement threshold</figcaption>
+          </figure><figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
+            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img src="assets/rehab/f-history.png" alt="History chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
+            <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">History</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;background:#dfe5f2;border-radius:20px;padding:clamp(20px,3vw,36px);">
+        <div style="min-width:0;">
+          <div style="font-family:'Courier Prime',monospace;color:#5b6fa8;font-size:20px;font-weight:700;">02</div>
+          <div style="font-weight:600;font-size:22px;line-height:1.3;margin-top:8px;">Add a baseline test and a monthly test for the Lemon game</div>
+          <p style="margin:10px 0 0;font-size:16px;line-height:1.6;color:#3b3d45;">A weekly Baseline Game now sits under Today’s Task, giving a consistent reference point for progress.</p>
+        </div>
+        <div style="flex:1;min-width:0;display:flex;gap:12px;">
+          <figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
+            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img src="assets/rehab/f-task.png" alt="Today’s task with the Baseline Game" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
+            <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">Today’s Task + Baseline Game</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 56px;">
+    <a href="cseed.html" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;text-decoration:none;color:#1c1d22;border-top:1px solid rgba(28,29,34,.15);padding-top:28px;">
+      <span><span style="display:block;font-family:'Courier Prime',monospace;font-size:14px;color:#6b6d76;">Next project</span><span style="display:block;font-weight:600;font-size:clamp(36px,5vw,64px);line-height:1.05;margin-top:8px;">CSEED Website →</span></span>
+      <span style="font-family:'Courier Prime',monospace;font-size:14px;">fangriley6@gmail.com</span>
+    </a>
+  </footer>
+</div>
+</body>
+</html>
