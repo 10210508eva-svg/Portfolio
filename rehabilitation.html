@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rehabilitation App — Riley Fang</title>
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/favicon-folder.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-folder.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&amp;family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&amp;family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth;}
 body{margin:0;background:#f5f4f0;color:#1c1d22;font-family:'Figtree',sans-serif;-webkit-font-smoothing:antialiased;}
@@ -72,12 +73,13 @@ img,video{max-width:100%;}
 }
 @media (min-width:1440px){html{font-size:17px;}}
 </style>
+<style id="cursor">html,body,*{cursor:url(assets/cursor-pencil.svg) 2 30, auto;}a,a *,button,button *,label{cursor:url(assets/cursor-pencil-hover.svg) 2 30, pointer;}</style>
 </head>
 <body>
 <div style="min-height:100vh;">
-  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,244,240,.9);backdrop-filter:blur(10px);border-bottom:1px solid rgba(28,29,34,.08);">
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,244,240,.97);border-bottom:1px solid rgba(28,29,34,.08);">
     <div class="hdr" style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
-      <a href="index.html" style="font-family:'Caveat',cursive;font-weight:500;font-size:28px;line-height:1;text-decoration:none;color:#1c1d22;">← Riley Fang</a>
+      <a href="index.html" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:21.8px;line-height:1;text-decoration:none;color:#1c1d22;">← Riley Fang</a>
       <input type="checkbox" id="navt" class="nav-toggle" aria-label="Toggle menu">
       <label for="navt" class="nav-btn" aria-hidden="true">☰</label>
       <nav class="site-nav" style="display:flex;gap:clamp(12px,2.5vw,28px);font-family:'Courier Prime',monospace;font-size:15px;flex-wrap:wrap;">
@@ -100,9 +102,9 @@ img,video{max-width:100%;}
       <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Platform</div><div style="font-size:17px;margin-top:6px;">iOS app + XREAL glasses</div></div>
     </div>
     <div class="phone-row" style="display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin-top:64px;padding:clamp(32px,5vw,64px) 16px;background:#5b6fa8;border-radius:20px;flex-wrap:wrap;">
-      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img src="assets/rehab/p-home.png" alt="Patient home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);"><img src="assets/rehab/c-home.png" alt="Clinician home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img src="assets/rehab/p-report.png" alt="Patient report" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img decoding="async" src="assets/rehab/p-home.webp" alt="Patient home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);"><img decoding="async" src="assets/rehab/c-home.png" alt="Clinician home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img loading="lazy" decoding="async" src="assets/rehab/p-report.png" alt="Patient report" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
     </div>
   </section>
 
@@ -198,7 +200,7 @@ img,video{max-width:100%;}
         </div>
         <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
           
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-home.png" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-home.webp" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
           
         </div>
       </div>
@@ -233,7 +235,7 @@ img,video{max-width:100%;}
         </div>
         <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
           
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-rehab.png" alt="Rehabilitation screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-rehab.png" alt="Rehabilitation screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
           
         </div>
       </div>
@@ -278,7 +280,7 @@ img,video{max-width:100%;}
         </div>
         <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
           
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-report.png" alt="Report screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-report.png" alt="Report screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
           
         </div>
       </div>
@@ -329,7 +331,7 @@ img,video{max-width:100%;}
         </div>
         <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
           
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-home.png" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-home.png" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
           
         </div>
       </div>
@@ -364,7 +366,7 @@ img,video{max-width:100%;}
         </div>
         <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
           
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-message.png" alt="Message screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-message.png" alt="Message screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
           
         </div>
       </div>
@@ -404,7 +406,7 @@ img,video{max-width:100%;}
         </div>
         <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
           
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-insight.png" alt="Insight screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-insight.png" alt="Insight screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
           
         </div>
       </div>
@@ -417,11 +419,11 @@ img,video{max-width:100%;}
     <p style="font-size:18px;line-height:1.6;max-width:36em;margin:0;">Patients see their recovery stats and pair their XREAL glasses; clinicians see license details, an audit log and their clinical obligations.</p>
     <div style="display:flex;justify-content:center;gap:clamp(20px,5vw,72px);flex-wrap:wrap;margin-top:40px;">
       <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;">
-        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/p-profile.png" alt="Patient profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-profile.png" alt="Patient profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
         <figcaption style="font-family:'Courier Prime',monospace;font-size:14px;">Patient</figcaption>
       </figure>
       <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;">
-        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img src="assets/rehab/c-profile.png" alt="Clinician profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
+        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-profile.png" alt="Clinician profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
         <figcaption style="font-family:'Courier Prime',monospace;font-size:14px;">Clinician</figcaption>
       </figure>
     </div>
@@ -477,10 +479,10 @@ img,video{max-width:100%;}
         </div>
         <div class="find-imgs" style="flex:1;min-width:0;display:flex;gap:12px;">
           <figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
-            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img src="assets/rehab/f-threshold.png" alt="Improvement threshold chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
+            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img loading="lazy" decoding="async" src="assets/rehab/f-threshold.png" alt="Improvement threshold chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
             <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">Improvement threshold</figcaption>
           </figure><figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
-            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img src="assets/rehab/f-history.png" alt="History chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
+            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img loading="lazy" decoding="async" src="assets/rehab/f-history.png" alt="History chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
             <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">History</figcaption>
           </figure>
         </div>
@@ -493,7 +495,7 @@ img,video{max-width:100%;}
         </div>
         <div class="find-imgs" style="flex:1;min-width:0;display:flex;gap:12px;">
           <figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
-            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img src="assets/rehab/f-task.png" alt="Today’s task with the Baseline Game" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
+            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img loading="lazy" decoding="async" src="assets/rehab/f-task.png" alt="Today’s task with the Baseline Game" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
             <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">Today’s Task + Baseline Game</figcaption>
           </figure>
         </div>

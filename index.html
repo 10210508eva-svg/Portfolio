@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Riley Fang — Portfolio</title>
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/png" href="assets/favicon-folder.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-folder.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&amp;family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
 html{scroll-behavior:smooth;}
 body{margin:0;background:#cbdfe5;color:#1d1d1d;font-family:'Figtree',sans-serif;-webkit-font-smoothing:antialiased;}
@@ -34,7 +35,7 @@ img,video{max-width:100%;}
 }
 @media (max-width:640px){
   .polaroid-wrap{margin-top:80px!important;align-self:center!important;}
-  .polaroid-cap{left:0!important;top:-60px!important;font-size:22px!important;}
+  .polaroid-cap{left:0!important;top:-64px!important;font-size:30px!important;}
 }
 @media (max-width:900px){
   .proj-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:640px!important;gap:44px 28px!important;}
@@ -73,39 +74,205 @@ img,video{max-width:100%;}
 }
 @media (min-width:1440px){html{font-size:17px;}}
 </style>
+<style id="desk">
+html,body,*{cursor:url(assets/cursor-pencil.svg) 2 30, auto;}
+a,a *,button,button *,label,[data-folder],[data-folder] *,[data-win-bar],[data-win-bar] *{cursor:url(assets/cursor-pencil-hover.svg) 2 30, pointer;}
+html.is-drawing,html.is-drawing *{user-select:none;-webkit-user-select:none;}
+[data-folder]:focus-visible,[data-close]:focus-visible{outline:2px solid #3f5f8a;outline-offset:4px;}
+html:not(.fd-go) .fd-pop{opacity:0;}
+@keyframes fd-float{0%{transform:translate(0,0) rotate(var(--r,0deg));}50%{transform:translate(3px,-8px) rotate(calc(var(--r,0deg) * .55));}100%{transform:translate(-2px,-3px) rotate(var(--r,0deg));}}
+.fd-float{will-change:transform;animation-name:fd-float;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-direction:alternate;}
+.fd:hover .fd-art{transform:translateY(-4px);}
+.fd:hover .fd-paper{transform:translateY(-26%) rotate(-5deg);}
+.fd:hover .fd-front{transform:perspective(340px) rotateX(-26deg);}
+.fd.is-dragging .fd-art{transform:scale(1.07) rotate(-3deg);}
+.fd.is-dragging .fd-front{box-shadow:0 18px 30px rgba(30,50,60,.28)!important;}
+.doodle-clear{position:fixed;right:20px;bottom:110px;z-index:60;display:none;font-family:'Courier Prime',monospace;font-size:14px;min-height:44px;padding:0 16px;background:#fafaf8;color:#1d1d1d;border:1.5px solid #1d1d1d;box-shadow:0 6px 16px rgba(30,50,60,.16);}
+.doodle-clear:hover{background:#e3edf1;}
+.dock a.is-on .dock-dot{opacity:1!important;}
+.dock a:focus-visible{outline:2px solid #3f5f8a;outline-offset:2px;border-radius:12px;}
+@media (prefers-reduced-motion: reduce){.fd-float{animation:none;transform:rotate(var(--r,0deg));}}
+@media (hover:none){.sticky{display:none!important;}}
+@media (max-width:860px){
+  .hero{justify-content:flex-start!important;}
+  .hero-copy{max-width:100%!important;}
+  .sticky{display:none!important;}
+  .desk-zone{position:relative!important;inset:auto!important;height:420px;margin-top:32px;}
+  .desk-note{display:none!important;}
+  .fd{width:104px!important;}
+  .fd-projects{left:6%!important;top:4%!important;}
+  .fd-about{left:calc(92% - 104px)!important;top:10%!important;}
+  .fd-contact{left:12%!important;top:54%!important;}
+  .fd-artwork{left:calc(88% - 104px)!important;top:58%!important;}
+}
+@media (max-width:480px){.slogan{font-size:11.4vw!important;}}
+</style>
+<script src="assets/desktop.js"></script>
 
 <style>
-.h1:hover{transform:rotate(0deg) translateY(-6px) !important;box-shadow:0 18px 36px rgba(30,50,60,.2) !important}
-.h2:hover{transform:rotate(0deg) translateY(-6px) !important;box-shadow:0 18px 36px rgba(30,50,60,.2) !important}
-.h3:hover{transform:rotate(0deg) translateY(-6px) !important;box-shadow:0 18px 36px rgba(30,50,60,.2) !important}
+.h1:hover{transform:translateY(-6px) scale(1.08) !important}
+.h2:hover{transform:translateY(-6px) scale(1.08) !important}
+.h3:hover{transform:translateY(-6px) scale(1.08) !important}
+.h4:hover{background:rgba(255,255,255,.15) !important}
+.h5:hover{background:#e3edf1 !important}
+.h6:hover{background:#e3edf1 !important}
+.h7:hover{background:#e3edf1 !important}
+.h8:hover{background:rgba(255,255,255,.15) !important}
+.h9:hover{background:rgba(255,255,255,.15) !important}
+.h10:hover{background:rgba(255,255,255,.15) !important}
+.h11:hover{transform:rotate(0deg) translateY(-6px) !important;box-shadow:0 18px 36px rgba(30,50,60,.2) !important}
+.h12:hover{transform:rotate(0deg) translateY(-6px) !important;box-shadow:0 18px 36px rgba(30,50,60,.2) !important}
+.h13:hover{transform:rotate(0deg) translateY(-6px) !important;box-shadow:0 18px 36px rgba(30,50,60,.2) !important}
 </style>
 </head>
 <body>
-<div style="background:url(assets/paper-texture.jpg) center/cover fixed, #cbdfe5;background-blend-mode:multiply;min-height:100vh;overflow-x:clip;">
+<div style="min-height:100vh;overflow-x:clip;">
+  <div aria-hidden="true" style="position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(rgba(240,245,246,.34),rgba(240,245,246,.34)), url(assets/paper-texture.jpg) center/cover, #cbdfe5;background-blend-mode:normal, multiply;transform:translateZ(0);"></div>
 
-  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(203,223,229,.88);backdrop-filter:blur(8px);">
-    <div class="hdr" style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;">
-      <a href="#top" style="font-family:'Caveat',cursive;font-weight:500;font-size:30px;text-decoration:none;line-height:1;">Riley Fang</a>
-      <input type="checkbox" id="navt" class="nav-toggle" aria-label="Toggle menu">
-      <label for="navt" class="nav-btn" aria-hidden="true">☰</label>
-      <nav class="site-nav" style="display:flex;gap:clamp(14px,3vw,32px);font-family:'Courier Prime',monospace;font-size:16px;flex-wrap:wrap;">
-        <a href="#about" style="text-decoration:none;">About</a>
-        <a href="#projects" style="text-decoration:none;">Projects</a>
-        <a href="#contact" style="text-decoration:none;">Contact</a>
-      </nav>
+  <nav class="dock" aria-label="Main" style="position:fixed;left:50%;bottom:clamp(12px,2.4vh,22px);transform:translateX(-50%);z-index:50;display:flex;align-items:flex-end;gap:4px;padding:4px 10px;background:rgba(250,250,248,.94);border-radius:20px;box-shadow:0 10px 30px rgba(30,50,60,.18), inset 0 0 0 1px rgba(255,255,255,.6);">
+    <a href="#top" data-dock="top" aria-label="home" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:64px;padding:8px 6px 6px;text-decoration:none;color:#1d1d1d;transition:transform .25s cubic-bezier(.3,1.6,.5,1);" class="h1">
+      <span style="width:44px;height:40px;display:flex;align-items:center;justify-content:center;"><img decoding="async" src="assets/riley-thumb.webp" alt="" style="width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #fafaf8;box-shadow:0 3px 8px rgba(30,50,60,.22);"></span>
+      <span style="font-family:'Courier Prime',monospace;font-size:12px;line-height:1;">home</span>
+      <span class="dock-dot" style="width:4px;height:4px;border-radius:50%;background:#3f5f8a;opacity:0;transition:opacity .2s;"></span>
+    </a>
+    <a href="#projects" data-dock="projects" aria-label="projects" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:64px;padding:8px 6px 6px;text-decoration:none;color:#1d1d1d;transition:transform .25s cubic-bezier(.3,1.6,.5,1);" class="h2">
+      <span style="width:44px;height:40px;display:flex;align-items:center;justify-content:center;"><span style="position:relative;width:42px;height:33px;display:block;"><span style="position:absolute;top:0;left:0;width:42%;height:24%;background:#2f4a6e;border-radius:4px 4px 0 0;"></span><span style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#2f4a6e;border-radius:2px 5px 5px 5px;"></span><span style="position:absolute;left:12%;right:12%;top:18%;bottom:12%;background:#fafaf8;"></span><span style="position:absolute;top:32%;left:0;right:0;bottom:0;background:#3f5f8a;border-radius:3px 3px 5px 5px;box-shadow:0 3px 6px rgba(30,50,60,.2);"></span></span></span>
+      <span style="font-family:'Courier Prime',monospace;font-size:12px;line-height:1;">projects</span>
+      <span class="dock-dot" style="width:4px;height:4px;border-radius:50%;background:#3f5f8a;opacity:0;transition:opacity .2s;"></span>
+    </a>
+    <a href="#contact" data-dock="contact" aria-label="contact" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:64px;padding:8px 6px 6px;text-decoration:none;color:#1d1d1d;transition:transform .25s cubic-bezier(.3,1.6,.5,1);" class="h3">
+      <span style="width:44px;height:40px;display:flex;align-items:center;justify-content:center;"><span style="position:relative;width:40px;height:28px;display:block;background:#fafaf8;border:1.5px solid #1d1d1d;overflow:hidden;box-shadow:0 3px 6px rgba(30,50,60,.16);"><span style="position:absolute;left:50%;top:-15px;width:24px;height:24px;border-right:1.5px solid #1d1d1d;border-bottom:1.5px solid #1d1d1d;background:#c9d6e8;transform:translateX(-50%) rotate(45deg);"></span></span></span>
+      <span style="font-family:'Courier Prime',monospace;font-size:12px;line-height:1;">contact</span>
+      <span class="dock-dot" style="width:4px;height:4px;border-radius:50%;background:#3f5f8a;opacity:0;transition:opacity .2s;"></span>
+    </a>
+  </nav>
+
+  <section id="top" data-desk="" data-doodle="" data-screen-label="Hero" class="hero" style="position:relative;box-sizing:border-box;min-height:max(680px,100vh);padding:clamp(24px,4vw,56px) clamp(20px,6vw,96px) clamp(110px,16vh,190px);display:flex;flex-direction:column;justify-content:center;">
+    <div class="hero-copy" style="position:relative;z-index:6;max-width:min(60%,800px);">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:clamp(18px,2.4vw,30px);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(21.8px,2vw,28.1px);line-height:1;color:#1d1d1d;">Hello, I’m Riley! | Product Designer</span>
+      </div>
+      <h1 class="slogan" style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(46px,6.2vw,100px);line-height:1.04;letter-spacing:-.02em;color:#1d1d1d;">Somewhere<br>between <span style="position:relative;display:inline-block;font-family:'Courier Prime',monospace;font-size:.8em;letter-spacing:-.02em;line-height:1.1;margin-left:.04em;vertical-align:.06em;">logic</span><br><em style="font-style:italic;">and</em> <span data-write="" style="position:relative;display:inline-block;font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:1.08em;line-height:1;letter-spacing:0;color:#3f5f8a;transform-origin:0 60%;">imagination.<svg viewBox="0 0 320 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:2%;bottom:-.06em;width:92%;height:.2em;overflow:visible;"><g filter="url(#doodle-tex)"><rect x="-20" y="-20" width="360" height="64" fill="none"></rect><path d="M4 16 C 70 6, 150 4, 236 10 S 318 20, 270 14" fill="none" stroke="#3f5f8a" stroke-width="5" stroke-linecap="round"></path></g></svg></span></h1>
+      <p style="margin:clamp(28px,3.4vw,44px) 0 0;max-width:30em;font-size:clamp(17px,1.35vw,20px);line-height:1.6;color:#2a2b30;text-wrap:pretty;">I design products that look good, make sense, and feel fun to use. Currently studying HCDE at the University of Washington.</p>
+      <div class="sticky" style="position:relative;display:inline-block;margin-top:clamp(36px,4vw,52px);background:#fafaf8;padding:16px 20px 14px;box-shadow:0 8px 20px rgba(30,50,60,.14);transform:rotate(-2deg);max-width:260px;">
+        <img decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:84px;transform:translateX(-50%) rotate(3deg);">
+        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:17.2px;line-height:1.15;">psst — click and drag anywhere to doodle. it fades away :)</div>
+      </div>
     </div>
-  </header>
-  <div class="hdr-space" style="height:64px;"></div>
+    <div class="desk-zone" style="position:absolute;inset:-4vh 0 8vh 0;pointer-events:none;">
 
-  <section id="top" data-screen-label="Hero" style="max-width:1200px;margin:0 auto;padding:clamp(32px,6vw,72px) clamp(20px,4vw,48px) clamp(64px,9vw,120px);">
-    <div style="position:relative;max-width:1060px;">
-      <img src="assets/tape.png" alt="" style="position:absolute;top:-4%;left:22%;width:22%;z-index:2;transform:rotate(-2deg);">
-      <div style="position:relative;aspect-ratio:1400/1040;background:url(assets/paper-note.png) center/100% 100% no-repeat;filter:drop-shadow(0 10px 24px rgba(30,50,60,.18));">
-        <div class="hero-contact" style="position:absolute;top:12%;right:6%;text-align:right;font-size:clamp(12px,1.6vw,20px);line-height:1.6;">
-          <div>602-816-7538</div>
-          <a href="mailto:fangriley6@gmail.com" style="text-decoration:none;">fangriley6@gmail.com</a>
+      <button type="button" data-folder="projects" class="fd fd-projects" aria-label="Open projects" style="position:absolute;left:66%;top:15%;width:clamp(110px,10vw,146px);width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
+        <div class="fd-pop">
+          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:5.8s;animation-delay:0s;--r:-6deg;">
+            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
+              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#2f4a6e;border-radius:8px 8px 0 0;"></div>
+              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#2f4a6e;border-radius:4px 10px 10px 10px;"></div>
+              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#3f5f8a;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+            </div>
+            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">projects</span>
+          </div>
         </div>
-        <h1 class="hero-h1" style="position:absolute;left:30%;top:34%;margin:0;font-family:'Caveat',cursive;font-weight:500;font-size:clamp(52px,11vw,150px);line-height:.95;transform:rotate(-2deg);">Riley’s<br><span style="padding-left:.15em;">portfolio</span></h1>
+      </button>
+
+      <button type="button" data-folder="about" class="fd fd-about" aria-label="Open about_me" style="position:absolute;left:84%;top:27%;width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
+        <div class="fd-pop">
+          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:6.6s;animation-delay:-1.8s;--r:5deg;">
+            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
+              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#6f97aa;border-radius:8px 8px 0 0;"></div>
+              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#6f97aa;border-radius:4px 10px 10px 10px;"></div>
+              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#8fb3c4;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+            </div>
+            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">about_me</span>
+          </div>
+        </div>
+      </button>
+
+      <button type="button" data-folder="contact" class="fd fd-contact" aria-label="Open contact" style="position:absolute;left:69%;top:57%;width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
+        <div class="fd-pop">
+          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:6.2s;animation-delay:-3.1s;--r:3deg;">
+            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
+              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#47598c;border-radius:8px 8px 0 0;"></div>
+              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#47598c;border-radius:4px 10px 10px 10px;"></div>
+              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#5b6fa8;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+            </div>
+            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">contact</span>
+          </div>
+        </div>
+      </button>
+
+      <button type="button" data-folder="artwork" class="fd fd-artwork" aria-label="Open artwork" style="position:absolute;left:85%;top:66%;width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
+        <div class="fd-pop">
+          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:5.4s;animation-delay:-0.9s;--r:-5deg;">
+            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
+              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#a9bbd4;border-radius:8px 8px 0 0;"></div>
+              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#a9bbd4;border-radius:4px 10px 10px 10px;"></div>
+              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#c9d6e8;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
+            </div>
+            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">artwork</span>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <div data-win="projects" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
+      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">projects/</span></span>
+        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h4">×</button>
+      </div>
+      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
+        <a href="rehabilitation.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:6px;" class="h5">
+          <img loading="lazy" decoding="async" src="assets/rehab/team.webp" alt="" style="width:72px;aspect-ratio:4/3;object-fit:cover;object-position:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.12);">
+          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Rehabilitation App</span>
+        </a>
+        <a href="cseed.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:6px;" class="h6">
+          <img loading="lazy" decoding="async" src="assets/cseed-hero.webp" alt="" style="width:72px;aspect-ratio:4/3;object-fit:cover;object-position:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.12);">
+          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">CSEED Website</span>
+        </a>
+        <a href="flavor-fingerprint.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:6px;" class="h7">
+          <img loading="lazy" decoding="async" src="assets/ff/card.webp" alt="" style="width:72px;aspect-ratio:4/3;object-fit:cover;object-position:top;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.12);">
+          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Flavor Fingerprint</span>
+        </a>
+        <a href="#projects" data-close="" style="font-family:'Courier Prime',monospace;font-size:14px;text-underline-offset:4px;">See all projects ↓</a>
+      </div>
+    </div>
+
+    <div data-win="about" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
+      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">about_me.txt</span></span>
+        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h8">×</button>
+      </div>
+      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
+        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:23.4px;line-height:1;">Hii, I’m Riley!</div>
+        <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty;">I’m an HCDE student at UW who likes making things that look good, make sense, and hopefully feel fun to use. I’m into UI/UX, visual design, and anything creative + tech.</p>
+        <a href="#about" data-close="" style="font-family:'Courier Prime',monospace;font-size:14px;text-underline-offset:4px;">Read more ↓</a>
+      </div>
+    </div>
+
+    <div data-win="contact" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
+      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">contact.txt</span></span>
+        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h9">×</button>
+      </div>
+      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:10px 16px;align-items:baseline;">
+          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Phone</span><a href="tel:6028167538" style="font-size:16px;">602-816-7538</a>
+          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Email</span><a href="mailto:fangriley6@gmail.com" style="font-size:16px;overflow-wrap:anywhere;">fangriley6@gmail.com</a>
+          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">LinkedIn</span><a href="https://www.linkedin.com/in/riley-fang-999180398/" target="_blank" style="font-size:16px;">riley-fang</a>
+        </div>
+      </div>
+    </div>
+
+    <div data-win="artwork" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
+      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
+        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">artwork/</span></span>
+        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h10">×</button>
+      </div>
+      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
+        <p style="font-family:'Courier Prime',monospace;font-size:14px;margin:12px 0;color:#3b4252;text-align:center;">This folder is empty.</p>
       </div>
     </div>
   </section>
@@ -113,50 +280,50 @@ img,video{max-width:100%;}
   <section id="about" data-screen-label="About" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));">
     <div style="background:#fbfbf9 repeating-linear-gradient(180deg,transparent 0 86px,#3b4252 86px 88px);padding:clamp(48px,7vw,96px) clamp(20px,5vw,72px);display:flex;justify-content:center;">
       <div style="position:relative;background:#f0f0ee;padding:16px 16px 72px;width:min(100%,400px);box-shadow:0 10px 30px rgba(0,0,0,.12);transform:rotate(-1.5deg);">
-        <img src="assets/tape.png" alt="" style="position:absolute;top:-22px;right:-30px;width:150px;transform:rotate(28deg);">
-        <div style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(28px,3vw,40px);margin:0 0 10px 12px;transform:rotate(-4deg);">Hello! I’m</div>
-        <img src="assets/riley-portrait.jpeg" alt="Portrait of Riley Fang" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;">
-        <div style="position:absolute;right:20px;bottom:14px;font-family:'Caveat',cursive;font-weight:500;font-size:clamp(34px,3.6vw,48px);transform:rotate(4deg);">Riley Fang</div>
+        <img loading="lazy" decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-22px;right:-30px;width:150px;transform:rotate(28deg);">
+        <div style="font-family:'Reenie Beanie',cursive;font-weight:400;font-size:clamp(44px,4.6vw,60px);line-height:1;color:#34507a;-webkit-text-stroke:1.1px #34507a;margin:0 0 8px 10px;transform:rotate(-4deg);transform-origin:left center;filter:url(#pencil-text);">Hello! I’m</div>
+        <img loading="lazy" decoding="async" src="assets/riley-portrait.webp" alt="Portrait of Riley Fang" style="display:block;width:100%;aspect-ratio:4/5;object-fit:cover;">
+        <div style="position:absolute;right:20px;bottom:10px;font-family:'Reenie Beanie',cursive;font-weight:400;font-size:clamp(50px,5.2vw,68px);line-height:1;color:#34507a;-webkit-text-stroke:1.1px #34507a;transform:rotate(4deg);transform-origin:right center;filter:url(#pencil-text);">Riley Fang</div>
       </div>
     </div>
     <div style="padding:clamp(48px,7vw,96px) clamp(20px,5vw,72px);display:flex;flex-direction:column;justify-content:center;gap:28px;">
-      <h2 style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(56px,7vw,92px);line-height:1;margin:0;">About Me</h2>
+      <h2 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(43.7px,5.5vw,71.8px);line-height:1;margin:0;">About Me</h2>
       <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.65;margin:0;max-width:34em;text-wrap:pretty;">Hii, I’m Riley! I’m an HCDE student at UW who likes making things that look good, make sense, and hopefully feel fun to use. I’m into UI/UX, visual design, and anything creative + tech. I love trying random ideas, experimenting with new tools, and figuring things out along the way : )</p>
       <div class="polaroid-wrap" style="position:relative;align-self:flex-end;margin-top:96px;width:min(100%,320px);">
-        <div class="polaroid-cap" style="position:absolute;top:-58px;left:-90px;font-family:'Caveat',cursive;font-weight:500;font-size:24px;line-height:1.05;transform:rotate(-12deg);white-space:nowrap;">Always trying and<br>exploring new things</div>
+        <div class="polaroid-cap" style="position:absolute;z-index:3;top:-58px;left:-90px;white-space:nowrap;font-family:'Reenie Beanie',cursive;font-weight:400;font-size:34px;line-height:.95;color:#34507a;-webkit-text-stroke:1.1px #34507a;transform:rotate(-12deg);filter:url(#pencil-text);">Always trying and<br>exploring new things</div>
         <div style="background:#f4f4f2;padding:10px 10px 28px;box-shadow:0 8px 22px rgba(0,0,0,.14);transform:rotate(3deg);position:relative;">
           <div style="position:absolute;top:-12px;right:14px;width:46px;height:46px;border-radius:50%;background:url(assets/tape.png) center/260% auto;"></div>
-          <img src="assets/riley-group.jpg" alt="Riley with friends and a sled dog" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;">
+          <img loading="lazy" decoding="async" src="assets/riley-group.jpg" alt="Riley with friends and a sled dog" style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;">
         </div>
       </div>
     </div>
   </section>
 
   <section id="projects" data-screen-label="Projects" style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,4vw,48px);">
-    <h2 style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(56px,7vw,92px);line-height:1;margin:0 0 56px;text-align:center;">Projects</h2>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(43.7px,5.5vw,71.8px);line-height:1;margin:0 0 56px;text-align:center;">Projects</h2>
     <div class="proj-grid" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2.5vw,32px);max-width:980px;margin:0 auto;">
       
-        <a href="rehabilitation.html" style="position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#1d1d1d;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#c9ccd2 31px 32px);padding:32px clamp(12px,1.6vw,18px) 20px clamp(18px,2.4vw,30px);box-shadow:0 10px 26px rgba(30,50,60,.14);transform:rotate(-1.5deg);transition:transform .25s ease, box-shadow .25s ease;" class="h1">
-          <img src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:90px;transform:translateX(-50%) rotate(-3deg);">
-          <div class="proj-title" style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.1;">Rehabilitation App</div>
+        <a href="rehabilitation.html" style="position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#1d1d1d;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#c9ccd2 31px 32px);padding:32px clamp(12px,1.6vw,18px) 20px clamp(18px,2.4vw,30px);box-shadow:0 10px 26px rgba(30,50,60,.14);transform:rotate(-1.5deg);transition:transform .25s ease, box-shadow .25s ease;" class="h11">
+          <img loading="lazy" decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:90px;transform:translateX(-50%) rotate(-3deg);">
+          <div class="proj-title" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(15.6px,1.7vw,20.3px);line-height:1.1;">Rehabilitation App</div>
           <p class="proj-desc" style="margin:0;font-size:clamp(12px,1.2vw,14px);line-height:1.5;">A dual-interface app shaped by feedback from patients, my PhD mentor, and my professor.</p>
-          <img src="assets/rehab/team.jpeg" alt="Rehabilitation App" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin-top:auto;">
+          <img loading="lazy" decoding="async" src="assets/rehab/team.webp" alt="Rehabilitation App" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin-top:auto;">
           <span style="font-family:'Courier Prime',monospace;font-size:13px;text-decoration:underline;text-underline-offset:4px;">Learn more →</span>
         </a>
       
-        <a href="cseed.html" style="position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#1d1d1d;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#c9ccd2 31px 32px);padding:32px clamp(12px,1.6vw,18px) 20px clamp(18px,2.4vw,30px);box-shadow:0 10px 26px rgba(30,50,60,.14);transform:rotate(1deg);transition:transform .25s ease, box-shadow .25s ease;" class="h2">
-          <img src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:90px;transform:translateX(-50%) rotate(-3deg);">
-          <div class="proj-title" style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.1;">CSEED Website</div>
+        <a href="cseed.html" style="position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#1d1d1d;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#c9ccd2 31px 32px);padding:32px clamp(12px,1.6vw,18px) 20px clamp(18px,2.4vw,30px);box-shadow:0 10px 26px rgba(30,50,60,.14);transform:rotate(1deg);transition:transform .25s ease, box-shadow .25s ease;" class="h12">
+          <img loading="lazy" decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:90px;transform:translateX(-50%) rotate(-3deg);">
+          <div class="proj-title" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(15.6px,1.7vw,20.3px);line-height:1.1;">CSEED Website</div>
           <p class="proj-desc" style="margin:0;font-size:clamp(12px,1.2vw,14px);line-height:1.5;">A rebuild and rebrand for CSEED, working with the team to finalize the design and overall digital experience.</p>
-          <img src="assets/cseed-hero.png" alt="CSEED Website" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin-top:auto;">
+          <img loading="lazy" decoding="async" src="assets/cseed-hero.webp" alt="CSEED Website" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin-top:auto;">
           <span style="font-family:'Courier Prime',monospace;font-size:13px;text-decoration:underline;text-underline-offset:4px;">Learn more →</span>
         </a>
       
-        <a href="flavor-fingerprint.html" style="position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#1d1d1d;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#c9ccd2 31px 32px);padding:32px clamp(12px,1.6vw,18px) 20px clamp(18px,2.4vw,30px);box-shadow:0 10px 26px rgba(30,50,60,.14);transform:rotate(-0.5deg);transition:transform .25s ease, box-shadow .25s ease;" class="h3">
-          <img src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:90px;transform:translateX(-50%) rotate(-3deg);">
-          <div class="proj-title" style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(20px,2.2vw,26px);line-height:1.1;">Flavor Fingerprint</div>
+        <a href="flavor-fingerprint.html" style="position:relative;display:flex;flex-direction:column;gap:14px;text-decoration:none;color:#1d1d1d;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#c9ccd2 31px 32px);padding:32px clamp(12px,1.6vw,18px) 20px clamp(18px,2.4vw,30px);box-shadow:0 10px 26px rgba(30,50,60,.14);transform:rotate(-0.5deg);transition:transform .25s ease, box-shadow .25s ease;" class="h13">
+          <img loading="lazy" decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:90px;transform:translateX(-50%) rotate(-3deg);">
+          <div class="proj-title" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(15.6px,1.7vw,20.3px);line-height:1.1;">Flavor Fingerprint</div>
           <p class="proj-desc" style="margin:0;font-size:clamp(12px,1.2vw,14px);line-height:1.5;">Our figBuild hackathon product: helping people eat healthy without giving up the flavors they love.</p>
-          <img src="assets/ff/card.png" alt="Flavor Fingerprint" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin-top:auto;">
+          <img loading="lazy" decoding="async" src="assets/ff/card.webp" alt="Flavor Fingerprint" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;display:block;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.12);margin-top:auto;">
           <span style="font-family:'Courier Prime',monospace;font-size:13px;text-decoration:underline;text-underline-offset:4px;">Learn more →</span>
         </a>
       
@@ -164,22 +331,22 @@ img,video{max-width:100%;}
   </section>
 
   <section id="contact" data-screen-label="Contact" style="background:repeating-linear-gradient(180deg,transparent 0 44px,rgba(150,180,190,.55) 44px 46px);max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,4vw,48px);">
-    <h2 style="font-family:'Caveat',cursive;font-weight:500;font-size:clamp(64px,10vw,130px);line-height:1;margin:0;">Contact Me!!</h2>
+    <h2 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(49.9px,7.8vw,101.4px);line-height:1;margin:0;">Contact Me!!</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:36px;margin-top:64px;">
       <div>
-        <div style="font-family:'Caveat',cursive;font-weight:500;font-size:28px;">Phone:</div>
+        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:21.8px;">Phone:</div>
         <a href="tel:6028167538" style="font-size:20px;text-decoration:none;">602-816-7538</a>
       </div>
       <div>
-        <div style="font-family:'Caveat',cursive;font-weight:500;font-size:28px;">LinkedIn:</div>
+        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:21.8px;">LinkedIn:</div>
         <a href="https://www.linkedin.com/in/riley-fang-999180398/" target="_blank" style="font-size:20px;">riley-fang</a>
       </div>
       <div>
-        <div style="font-family:'Caveat',cursive;font-weight:500;font-size:28px;">Email:</div>
+        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:21.8px;">Email:</div>
         <a href="mailto:fangriley6@gmail.com" style="font-size:20px;text-decoration:none;">fangriley6@gmail.com</a>
       </div>
     </div>
-    <div style="font-family:'Courier Prime',monospace;font-size:13px;margin-top:96px;">© 2026 Riley Fang</div>
+    <div style="font-family:'Courier Prime',monospace;font-size:13px;margin-top:96px;padding-bottom:72px;">© 2026 Riley Fang</div>
   </section>
 
   
