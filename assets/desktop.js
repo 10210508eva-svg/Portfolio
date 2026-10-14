@@ -12,8 +12,8 @@ function open(f){var n=f.getAttribute('data-folder'),w=desk(f).querySelector('[d
  if(w.animate&&!reduce){var fr=f.getBoundingClientRect(),dx=fr.left+fr.width/2-(x+W/2),dy=fr.top+fr.height/2-(y+H/2);
   w.animate([{transform:'translate('+dx+'px,'+dy+'px) scale(.12)',opacity:0},{transform:'none',opacity:1}],{duration:420,easing:'cubic-bezier(.2,.85,.25,1.05)'});}}
 function close(w){if(w.animate&&!reduce){w.animate([{transform:'none',opacity:1},{transform:'scale(.92) translateY(8px)',opacity:0}],{duration:160,easing:'ease-in'}).onfinish=function(){w.style.display='none';};}else w.style.display='none';}
-function intro(){var fs=document.querySelectorAll('[data-folder]');if(!fs.length||!document.body){if(tries++<300)requestAnimationFrame(intro);return;}
- ensure();document.documentElement.classList.add('fd-go');if(reduce)return;
+function intro(){var fs=document.querySelectorAll('[data-folder]');if(!document.body||!document.querySelector('[data-desk],[data-doodle]')){if(tries++<300)requestAnimationFrame(intro);return;}
+ ensure();document.documentElement.classList.add('fd-go');if(reduce||!fs.length)return;
  var d=desk(fs[0]),r=d.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+Math.min(r.height,innerHeight)/2;
  fs.forEach(function(f,i){var p=f.querySelector('.fd-pop');if(!p||!p.animate)return;var b=f.getBoundingClientRect(),dx=cx-(b.left+b.width/2),dy=cy-(b.top+b.height/2);
   p.animate([{transform:'translate('+dx+'px,'+dy+'px) scale(.15) rotate(-24deg)',opacity:0},{opacity:1,offset:.35},{transform:'translate(0,0) scale(1) rotate(0)',opacity:1}],{duration:1200,delay:350+i*130,easing:'cubic-bezier(.18,.9,.24,1.12)',fill:'backwards'});});}
@@ -57,7 +57,7 @@ document.addEventListener('pointerdown',function(e){
  var f=e.target.closest('[data-folder]');
  if(f){var zr=f.offsetParent.getBoundingClientRect(),fr=f.getBoundingClientRect();drag={f:f,r:zr,dx:e.clientX-fr.left,dy:e.clientY-fr.top,sx:e.clientX,sy:e.clientY,moved:false};if(f.setPointerCapture)f.setPointerCapture(e.pointerId);e.preventDefault();return;}
  if(e.button!==0||e.pointerType==='touch'||!document.querySelector('[data-doodle]'))return;
- if(e.target.closest('a,button,input,label,textarea,select,[data-win],header,nav,.doodle-clear'))return;
+ if(e.target.closest('a,button,input,label,textarea,select,[data-win],header,nav,.doodle-clear,[data-env]'))return;
  ensure();g=el('g',{filter:'url(#doodle-tex)'});pad=el('rect',{fill:'none'});
  p1=el('path',{fill:'none',stroke:'#34507a','stroke-width':'5','stroke-linecap':'round','stroke-linejoin':'round',opacity:'.9'});
  p2=el('path',{fill:'none',stroke:'#3f5f8a','stroke-width':'2.6','stroke-linecap':'round','stroke-linejoin':'round',opacity:'.55'});

@@ -4,11 +4,15 @@ Personal portfolio site. Plain HTML/CSS/JS — no build step.
 
 ## Structure
 ```
-index.html                 Home (hero desktop, about, projects, contact)
+index.html                 Home (envelope hero, about, projects, contact)
 rehabilitation.html        Case study: Rehabilitation App
 cseed.html                 Case study: CSEED Website
 flavor-fingerprint.html    Case study: Flavor Fingerprint
-assets/                    Images, favicon, cursor, desktop.js (folders, windows, doodles, dock)
+assets/
+  envelope.js              Hero envelope animation (auto-plays; tap envelope to replay)
+  desktop.js               Doodling, dock highlight, pencil texture filters
+  hero/                    Cut-out photos used in the hero
+  ff/, rehab/              Case-study images
 ```
 
 ## Publish with GitHub Pages
@@ -19,4 +23,5 @@ assets/                    Images, favicon, cursor, desktop.js (folders, windows
 
 ## Editing
 - Text and layout: edit the `.html` files directly.
-- Interactions (folders, windows, doodling, dock): `assets/desktop.js`.
+- Hero animation timing: `assets/envelope.js`.
+- Doodling and dock: `assets/desktop.js`.

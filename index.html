@@ -4,9 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Riley Fang — Portfolio</title>
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-<link rel="icon" type="image/png" href="assets/favicon-folder.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon-folder.png">
+<link rel="icon" type="image/png" href="assets/favicon-riley.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-riley.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&amp;family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
@@ -107,6 +106,30 @@ html:not(.fd-go) .fd-pop{opacity:0;}
 }
 @media (max-width:480px){.slogan{font-size:11.4vw!important;}}
 </style>
+<style id="env">
+[data-env],[data-env] *{cursor:url(assets/cursor-pencil-hover.svg) 2 30, pointer;}
+[data-env-front]:focus-visible{outline:2px solid #3f5f8a;outline-offset:6px;}
+.env-stk img{transition:transform .35s cubic-bezier(.3,1.6,.5,1);filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 10px 14px rgba(30,50,60,.18));}
+.env-stk:hover img{transform:scale(1.05) rotate(-3deg);}
+.env-card > div{transition:transform .35s cubic-bezier(.3,1.6,.5,1);}
+.env-card:hover > div{transform:translateY(-6px) rotate(-2deg);}
+@media (max-width:760px){
+ .hero{--W:min(76vw,420px)!important;}
+ .hero [data-env]{margin-top:calc(var(--W) * 1.15)!important;margin-bottom:calc(var(--W) * 1.15)!important;}
+ .env-hello{top:-84%!important;}
+ .env-hello{left:-6%!important;}
+ .env-role{left:auto!important;right:-8%!important;top:-46%!important;}
+ .env-peace{left:calc(var(--W) * -.14)!important;top:calc(var(--W) * .66)!important;width:calc(var(--W) * .54)!important;}
+ .env-dog1{left:calc(var(--W) * .26)!important;top:calc(var(--W) * 1.12)!important;width:calc(var(--W) * .44)!important;}
+ .env-crouch{left:calc(var(--W) * .6)!important;top:calc(var(--W) * .72)!important;width:calc(var(--W) * .46)!important;}
+ .env-dog2{left:calc(var(--W) * .84)!important;top:calc(var(--W) * 1.1)!important;width:calc(var(--W) * .32)!important;}
+ .env-c1{left:calc(var(--W) * -.1)!important;top:calc(var(--W) * -1.05)!important;}
+ .env-c2{left:calc(var(--W) * .34)!important;top:calc(var(--W) * -1.12)!important;}
+ .env-c3{left:calc(var(--W) * .78)!important;top:calc(var(--W) * -1.04)!important;}
+ .env-card{width:calc(var(--W) * .36)!important;font-size:calc(var(--W) * .05)!important;}
+}
+</style>
+<script src="assets/envelope.js"></script>
 <script src="assets/desktop.js"></script>
 
 <style>
@@ -136,7 +159,7 @@ html:not(.fd-go) .fd-pop{opacity:0;}
       <span class="dock-dot" style="width:4px;height:4px;border-radius:50%;background:#3f5f8a;opacity:0;transition:opacity .2s;"></span>
     </a>
     <a href="#projects" data-dock="projects" aria-label="projects" style="position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:64px;padding:8px 6px 6px;text-decoration:none;color:#1d1d1d;transition:transform .25s cubic-bezier(.3,1.6,.5,1);" class="h2">
-      <span style="width:44px;height:40px;display:flex;align-items:center;justify-content:center;"><span style="position:relative;width:42px;height:33px;display:block;"><span style="position:absolute;top:0;left:0;width:42%;height:24%;background:#2f4a6e;border-radius:4px 4px 0 0;"></span><span style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#2f4a6e;border-radius:2px 5px 5px 5px;"></span><span style="position:absolute;left:12%;right:12%;top:18%;bottom:12%;background:#fafaf8;"></span><span style="position:absolute;top:32%;left:0;right:0;bottom:0;background:#3f5f8a;border-radius:3px 3px 5px 5px;box-shadow:0 3px 6px rgba(30,50,60,.2);"></span></span></span>
+      <span style="position:relative;width:44px;height:40px;display:flex;align-items:center;justify-content:center;"><span style="position:relative;width:32px;height:32px;display:block;transform:rotate(-4deg);background:#fafaf8;box-shadow:0 3px 7px rgba(30,50,60,.22);"><span style="position:absolute;left:6px;right:6px;top:11px;height:1.5px;background:#3f5f8a;opacity:.5;"></span><span style="position:absolute;left:6px;right:9px;top:17px;height:1.5px;background:#3f5f8a;opacity:.5;"></span><span style="position:absolute;left:6px;right:13px;top:23px;height:1.5px;background:#3f5f8a;opacity:.5;"></span></span><img decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-1px;left:50%;width:24px;transform:translateX(-50%) rotate(3deg);"></span>
       <span style="font-family:'Courier Prime',monospace;font-size:12px;line-height:1;">projects</span>
       <span class="dock-dot" style="width:4px;height:4px;border-radius:50%;background:#3f5f8a;opacity:0;transition:opacity .2s;"></span>
     </a>
@@ -147,133 +170,61 @@ html:not(.fd-go) .fd-pop{opacity:0;}
     </a>
   </nav>
 
-  <section id="top" data-desk="" data-doodle="" data-screen-label="Hero" class="hero" style="position:relative;box-sizing:border-box;min-height:max(680px,100vh);padding:clamp(24px,4vw,56px) clamp(20px,6vw,96px) clamp(110px,16vh,190px);display:flex;flex-direction:column;justify-content:center;">
-    <div class="hero-copy" style="position:relative;z-index:6;max-width:min(60%,800px);">
-      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:clamp(18px,2.4vw,30px);">
-        <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(21.8px,2vw,28.1px);line-height:1;color:#1d1d1d;">Hello, I’m Riley! | Product Designer</span>
-      </div>
-      <h1 class="slogan" style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(46px,6.2vw,100px);line-height:1.04;letter-spacing:-.02em;color:#1d1d1d;">Somewhere<br>between <span style="position:relative;display:inline-block;font-family:'Courier Prime',monospace;font-size:.8em;letter-spacing:-.02em;line-height:1.1;margin-left:.04em;vertical-align:.06em;">logic</span><br><em style="font-style:italic;">and</em> <span data-write="" style="position:relative;display:inline-block;font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:1.08em;line-height:1;letter-spacing:0;color:#3f5f8a;transform-origin:0 60%;">imagination.<svg viewBox="0 0 320 24" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:2%;bottom:-.06em;width:92%;height:.2em;overflow:visible;"><g filter="url(#doodle-tex)"><rect x="-20" y="-20" width="360" height="64" fill="none"></rect><path d="M4 16 C 70 6, 150 4, 236 10 S 318 20, 270 14" fill="none" stroke="#3f5f8a" stroke-width="5" stroke-linecap="round"></path></g></svg></span></h1>
-      <p style="margin:clamp(28px,3.4vw,44px) 0 0;max-width:30em;font-size:clamp(17px,1.35vw,20px);line-height:1.6;color:#2a2b30;text-wrap:pretty;">I design products that look good, make sense, and feel fun to use. Currently studying HCDE at the University of Washington.</p>
-      <div class="sticky" style="position:relative;display:inline-block;margin-top:clamp(36px,4vw,52px);background:#fafaf8;padding:16px 20px 14px;box-shadow:0 8px 20px rgba(30,50,60,.14);transform:rotate(-2deg);max-width:260px;">
-        <img decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:84px;transform:translateX(-50%) rotate(3deg);">
-        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:17.2px;line-height:1.15;">psst — click and drag anywhere to doodle. it fades away :)</div>
-      </div>
-    </div>
-    <div class="desk-zone" style="position:absolute;inset:-4vh 0 8vh 0;pointer-events:none;">
-
-      <button type="button" data-folder="projects" class="fd fd-projects" aria-label="Open projects" style="position:absolute;left:66%;top:15%;width:clamp(110px,10vw,146px);width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
-        <div class="fd-pop">
-          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:5.8s;animation-delay:0s;--r:-6deg;">
-            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
-              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#2f4a6e;border-radius:8px 8px 0 0;"></div>
-              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#2f4a6e;border-radius:4px 10px 10px 10px;"></div>
-              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#3f5f8a;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-            </div>
-            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">projects</span>
-          </div>
-        </div>
-      </button>
-
-      <button type="button" data-folder="about" class="fd fd-about" aria-label="Open about_me" style="position:absolute;left:84%;top:27%;width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
-        <div class="fd-pop">
-          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:6.6s;animation-delay:-1.8s;--r:5deg;">
-            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
-              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#6f97aa;border-radius:8px 8px 0 0;"></div>
-              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#6f97aa;border-radius:4px 10px 10px 10px;"></div>
-              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#8fb3c4;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-            </div>
-            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">about_me</span>
-          </div>
-        </div>
-      </button>
-
-      <button type="button" data-folder="contact" class="fd fd-contact" aria-label="Open contact" style="position:absolute;left:69%;top:57%;width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
-        <div class="fd-pop">
-          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:6.2s;animation-delay:-3.1s;--r:3deg;">
-            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
-              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#47598c;border-radius:8px 8px 0 0;"></div>
-              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#47598c;border-radius:4px 10px 10px 10px;"></div>
-              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#5b6fa8;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-            </div>
-            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">contact</span>
-          </div>
-        </div>
-      </button>
-
-      <button type="button" data-folder="artwork" class="fd fd-artwork" aria-label="Open artwork" style="position:absolute;left:85%;top:66%;width:clamp(96px,8.6vw,128px);padding:0;border:0;background:none;touch-action:none;pointer-events:auto;z-index:5;">
-        <div class="fd-pop">
-          <div class="fd-float" style="display:flex;flex-direction:column;align-items:center;gap:10px;animation-duration:5.4s;animation-delay:-0.9s;--r:-5deg;">
-            <div class="fd-art" style="width:100%;position:relative;aspect-ratio:5/4;transition:transform .3s cubic-bezier(.3,1.5,.5,1);">
-              <div style="position:absolute;top:0;left:0;width:42%;height:22%;background:#a9bbd4;border-radius:8px 8px 0 0;"></div>
-              <div style="position:absolute;top:12%;left:0;right:0;bottom:0;background:#a9bbd4;border-radius:4px 10px 10px 10px;"></div>
-              <div class="fd-paper" style="position:absolute;left:9%;right:11%;top:16%;bottom:10%;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 7px,#d9dee3 7px 8px);box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-              <div class="fd-front" style="position:absolute;top:28%;left:0;right:0;bottom:0;background:#c9d6e8;border-radius:6px 6px 10px 10px;box-shadow:0 8px 18px rgba(30,50,60,.2);transform-origin:50% 100%;transition:transform .35s cubic-bezier(.3,1.5,.5,1);"></div>
-            </div>
-            <span style="font-family:'Courier Prime',monospace;font-size:clamp(13px,1.1vw,15px);color:#1d1d1d;background:rgba(250,250,248,.9);padding:2px 7px;white-space:nowrap;">artwork</span>
-          </div>
-        </div>
-      </button>
-    </div>
-
-    <div data-win="projects" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
-      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
-        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">projects/</span></span>
-        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h4">×</button>
-      </div>
-      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
-        <a href="rehabilitation.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:6px;" class="h5">
-          <img loading="lazy" decoding="async" src="assets/rehab/team.webp" alt="" style="width:72px;aspect-ratio:4/3;object-fit:cover;object-position:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.12);">
-          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Rehabilitation App</span>
-        </a>
-        <a href="cseed.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:6px;" class="h6">
-          <img loading="lazy" decoding="async" src="assets/cseed-hero.webp" alt="" style="width:72px;aspect-ratio:4/3;object-fit:cover;object-position:center;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.12);">
-          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">CSEED Website</span>
-        </a>
-        <a href="flavor-fingerprint.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;padding:6px;" class="h7">
-          <img loading="lazy" decoding="async" src="assets/ff/card.webp" alt="" style="width:72px;aspect-ratio:4/3;object-fit:cover;object-position:top;border:3px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.12);">
-          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Flavor Fingerprint</span>
-        </a>
-        <a href="#projects" data-close="" style="font-family:'Courier Prime',monospace;font-size:14px;text-underline-offset:4px;">See all projects ↓</a>
-      </div>
-    </div>
-
-    <div data-win="about" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
-      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
-        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">about_me.txt</span></span>
-        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h8">×</button>
-      </div>
-      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
-        <div style="font-family:'Source Serif 4',serif;font-weight:400;font-size:23.4px;line-height:1;">Hii, I’m Riley!</div>
-        <p style="margin:0;font-size:16px;line-height:1.6;text-wrap:pretty;">I’m an HCDE student at UW who likes making things that look good, make sense, and hopefully feel fun to use. I’m into UI/UX, visual design, and anything creative + tech.</p>
-        <a href="#about" data-close="" style="font-family:'Courier Prime',monospace;font-size:14px;text-underline-offset:4px;">Read more ↓</a>
-      </div>
-    </div>
-
-    <div data-win="contact" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
-      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
-        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">contact.txt</span></span>
-        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h9">×</button>
-      </div>
-      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
-        <div style="display:grid;grid-template-columns:auto 1fr;gap:10px 16px;align-items:baseline;">
-          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Phone</span><a href="tel:6028167538" style="font-size:16px;">602-816-7538</a>
-          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">Email</span><a href="mailto:fangriley6@gmail.com" style="font-size:16px;overflow-wrap:anywhere;">fangriley6@gmail.com</a>
-          <span style="font-family:'Source Serif 4',serif;font-weight:400;font-size:18.7px;">LinkedIn</span><a href="https://www.linkedin.com/in/riley-fang-999180398/" target="_blank" style="font-size:16px;">riley-fang</a>
+  <section id="top" data-doodle="" data-screen-label="Hero" class="hero" style="--W:min(680px,calc((100vw - 48px) / 3),max(240px,calc((100vh - 250px) / 1.27)));position:relative;box-sizing:border-box;min-height:max(640px,100vh);padding:clamp(24px,4vw,56px) clamp(16px,4vw,48px) clamp(120px,17vh,190px);display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:clip;">
+    <div data-env="" style="position:relative;width:var(--W);aspect-ratio:8/5;margin-top:calc(var(--W) * .64);margin-bottom:48px;transform-origin:50% 100%;opacity:0;">
+      <div aria-hidden="true" style="position:absolute;inset:0;z-index:1;">
+        <div style="position:absolute;inset:0;background:#dfe7ea repeating-linear-gradient(180deg,transparent 0 11px,rgba(63,95,138,.07) 11px 12px);border:2px solid #1d1d1d;box-shadow:0 18px 40px rgba(30,50,60,.2);"></div>
+        <div data-flap-open="" style="position:absolute;left:0;right:0;top:0;height:60%;transform-origin:50% 0;opacity:0;">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="display:block;width:100%;height:100%;overflow:visible;"><polygon points="0,0 100,0 50,100" fill="#c9d6e8" stroke="#1d1d1d" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"></polygon></svg>
         </div>
       </div>
-    </div>
+      <div style="position:absolute;left:0;right:0;bottom:0;top:-300%;overflow:hidden;z-index:2;pointer-events:none;">
+        <div data-env-letter="" style="position:absolute;left:5%;right:5%;bottom:17.5%;transform:translateY(100%);text-align:center;background:#fafaf8 repeating-linear-gradient(180deg,transparent 0 31px,#dde3e7 31px 32px);padding:calc(var(--W) * .065) calc(var(--W) * .04) calc(var(--W) * .2);box-shadow:0 10px 26px rgba(30,50,60,.14);">
+          <h1 style="margin:0;font-family:'Source Serif 4',serif;font-weight:400;font-size:calc(var(--W) * .086);line-height:1.04;letter-spacing:-.02em;color:#1d1d1d;white-space:nowrap;">Somewhere<br>between <span style="position:relative;display:inline-block;font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:1.08em;line-height:1;letter-spacing:0;text-transform:uppercase;color:#3f5f8a;">logic</span><br><em style="font-style:italic;">and</em> <span style="position:relative;display:inline-block;font-family:'Source Serif 4',serif;font-style:italic;font-weight:400;font-size:1.08em;line-height:1;letter-spacing:0;color:transparent;-webkit-text-stroke:max(1.2px,.024em) #3f5f8a;paint-order:stroke fill;">imagination.</span></h1>
+        </div>
+      </div>
+      <div data-env-front="" role="button" tabindex="0" aria-label="Open the envelope" style="position:absolute;inset:0;z-index:3;">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;overflow:visible;"><polygon points="0,0 50,56 100,0 100,100 0,100" fill="#fafaf8" stroke="#1d1d1d" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"></polygon><path d="M0 100 L41 50 M100 100 L59 50" fill="none" stroke="#1d1d1d" stroke-width="1.2" vector-effect="non-scaling-stroke" opacity=".45"></path></svg>
+        <div data-flap-closed="" style="position:absolute;left:0;right:0;top:0;height:60%;transform-origin:50% 0;">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" style="display:block;width:100%;height:100%;overflow:visible;filter:drop-shadow(0 3px 3px rgba(30,50,60,.14));"><polygon points="0,0 100,0 50,100" fill="#c9d6e8" stroke="#1d1d1d" stroke-width="2" vector-effect="non-scaling-stroke" stroke-linejoin="round"></polygon></svg>
+        </div>
+        <div aria-hidden="true" style="position:absolute;left:7%;bottom:10%;font-family:'Reenie Beanie',cursive;font-weight:400;font-size:max(28px,calc(var(--W) * .075));line-height:1;color:#34507a;-webkit-text-stroke:.8px #34507a;transform:rotate(-4deg);filter:url(#pencil-text);">for you :)</div>
+        <div data-env-seal="" aria-hidden="true" style="position:absolute;left:50%;top:60%;width:calc(var(--W) * .11);height:calc(var(--W) * .11);transform:translate(-50%,-50%);border-radius:50%;background:#3f5f8a;box-shadow:0 4px 10px rgba(30,50,60,.28), inset 0 0 0 3px rgba(250,250,248,.25);display:flex;align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-style:italic;font-size:calc(var(--W) * .055);line-height:1;color:#fafaf8;">R</div>
+      </div>
+      <div data-env-note="" data-order="0" data-rot="-6" class="env-hello" style="position:absolute;left:-30%;top:-100%;z-index:2;opacity:0;transform:rotate(-6deg);">
+        <div class="fd-float" style="animation-duration:5.8s;--r:0deg;">
+          <p style="margin:0;background:#fafaf8;padding:.55em .8em .45em;box-shadow:0 8px 20px rgba(30,50,60,.14);font-family:'Source Serif 4',serif;font-weight:400;font-size:max(20px,calc(var(--W) * .064));line-height:1;color:#1d1d1d;white-space:nowrap;">Hello, I’m Riley!</p>
+        </div>
+      </div>
+      <div data-env-note="" data-order="1" data-rot="5" class="env-role" style="position:absolute;left:calc(var(--W) * .78);top:calc(var(--W) * -.5);z-index:2;opacity:0;transform:rotate(5deg);">
+        <div class="fd-float" style="position:relative;animation-duration:6.4s;animation-delay:-2s;--r:0deg;">
+          <img decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-14px;left:50%;width:76px;transform:translateX(-50%) rotate(-4deg);z-index:1;">
+          <p style="margin:0;background:#fafaf8;padding:.65em .85em .5em;box-shadow:0 8px 20px rgba(30,50,60,.14);font-family:'Source Serif 4',serif;font-weight:400;font-size:max(20px,calc(var(--W) * .064));line-height:1;color:#1d1d1d;white-space:nowrap;">Product Designer</p>
+        </div>
+      </div>
 
-    <div data-win="artwork" style="display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(92vw,440px);max-height:78vh;flex-direction:column;background:#fafaf8;box-shadow:0 22px 50px rgba(30,50,60,.3);z-index:100;">
-      <div data-win-bar="" style="display:flex;justify-content:space-between;align-items:center;gap:12px;background:#3f5f8a;color:#fff;padding:6px 6px 6px 14px;font-family:'Courier Prime',monospace;font-size:14px;touch-action:none;">
-        <span style="display:flex;align-items:center;gap:7px;"><span style="width:9px;height:9px;border-radius:50%;background:#fafaf8;"></span><span style="width:9px;height:9px;border-radius:50%;background:rgba(250,250,248,.55);"></span><span style="margin-left:6px;">artwork/</span></span>
-        <button type="button" data-close="" aria-label="Close" style="width:36px;height:36px;border:0;background:none;color:#fff;font-size:22px;line-height:1;" class="h10">×</button>
+      <div data-env-note="" data-order="2" data-rot="-9" class="env-card env-c1" style="position:absolute;left:calc(var(--W) * -1.08);top:calc(var(--W) * -0.66);width:calc(var(--W) * 0.36);font-size:calc(var(--W) * 0.048);z-index:2;opacity:0;transform:rotate(-9deg);">
+        <div class="fd-float" style="animation-duration:6.2s;animation-delay:-1s;--r:0deg;"><div style="filter:drop-shadow(0 8px 12px rgba(30,50,60,.18));"><div style="aspect-ratio:4/5;box-sizing:border-box;padding:1.05em;background:#fafaf8;-webkit-mask:radial-gradient(circle .32em at 50% 50%,#0000 96%,#000) -.4em -.4em / .8em .8em round, linear-gradient(#000 0 0) .4em .4em / calc(100% - .8em) calc(100% - .8em) no-repeat;mask:radial-gradient(circle .32em at 50% 50%,#0000 96%,#000) -.4em -.4em / .8em .8em round, linear-gradient(#000 0 0) .4em .4em / calc(100% - .8em) calc(100% - .8em) no-repeat;"><div style="position:relative;height:100%;box-sizing:border-box;border:1.5px solid #6f97aa;padding:.6em;display:flex;flex-direction:column;justify-content:space-between;"><span style="font-family:'Courier Prime',monospace;font-size:.8em;color:#3f5f8a;">No.01</span><span aria-hidden="true" style="position:absolute;right:.5em;top:.4em;font-size:.9em;color:#3f5f8a;">✦</span><span aria-hidden="true" style="position:absolute;right:1.4em;top:1.5em;font-size:.55em;color:#6f97aa;">✦</span><span style="font-family:'Source Serif 4',serif;font-size:1.35em;line-height:1.02;color:#1d1d1d;">UI/UX<br><em style="color:#3f5f8a;">design</em></span></div></div></div></div>
       </div>
-      <div style="padding:20px 22px 24px;overflow:auto;display:flex;flex-direction:column;gap:14px;">
-        <p style="font-family:'Courier Prime',monospace;font-size:14px;margin:12px 0;color:#3b4252;text-align:center;">This folder is empty.</p>
+      <div data-env-note="" data-order="3" data-rot="4" class="env-card env-c2" style="position:absolute;left:calc(var(--W) * 1.26);top:calc(var(--W) * -0.8);width:calc(var(--W) * 0.36);font-size:calc(var(--W) * 0.048);z-index:2;opacity:0;transform:rotate(4deg);">
+        <div class="fd-float" style="animation-duration:5.6s;animation-delay:-2.4s;--r:0deg;"><div style="position:relative;background:#c8a982;padding:.7em;box-shadow:0 8px 18px rgba(30,50,60,.18);"><img decoding="async" src="assets/tape.png" alt="" style="position:absolute;top:-.9em;left:50%;width:4.2em;transform:translateX(-50%) rotate(-5deg);"><div style="aspect-ratio:1;border-radius:50%;background:#fafaf8;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25em;text-align:center;"><span aria-hidden="true" style="font-size:1.2em;color:#3f5f8a;line-height:1;">✿</span><span style="font-family:'Courier Prime',monospace;font-size:1em;letter-spacing:.06em;color:#1d1d1d;">PROTOTYPING</span></div></div></div>
       </div>
+      <div data-env-note="" data-order="4" data-rot="7" class="env-card env-c3" style="position:absolute;left:calc(var(--W) * 1.66);top:calc(var(--W) * -0.34);width:calc(var(--W) * 0.36);font-size:calc(var(--W) * 0.048);z-index:2;opacity:0;transform:rotate(7deg);">
+        <div class="fd-float" style="animation-duration:6.8s;animation-delay:-0.6s;--r:0deg;"><div style="background:#3f5f8a;padding:.45em;border-radius:.3em;box-shadow:0 8px 18px rgba(30,50,60,.2);"><div style="aspect-ratio:5/6;box-sizing:border-box;background:#fafaf8;border-radius:.6em;outline:2px dashed #c9d6e8;outline-offset:-.5em;padding:1.1em .9em;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;"><span style="font-family:'Courier Prime',monospace;font-size:.85em;letter-spacing:.08em;color:#1d1d1d;">USER</span><span aria-hidden="true" style="font-size:1.6em;line-height:1;color:#3f5f8a;">♡</span><span style="font-family:'Courier Prime',monospace;font-size:.85em;letter-spacing:.08em;color:#1d1d1d;">RESEARCH</span></div></div></div>
+      </div>
+      <div data-env-note="" data-order="5" data-rot="-3" class="env-stk env-peace" style="position:absolute;left:calc(var(--W) * -0.54);top:calc(var(--W) * -0.3);width:calc(var(--W) * 0.72);z-index:4;opacity:0;transform:rotate(-3deg);">
+        <div class="fd-float" style="animation-duration:6.4s;animation-delay:-1.2s;--r:0deg;"><img decoding="async" src="assets/hero/riley-peace.webp" alt="Riley throwing a peace sign" style="display:block;width:100%;height:auto;"></div>
+      </div>
+      <div data-env-note="" data-order="6" data-rot="3" class="env-stk env-crouch" style="position:absolute;left:calc(var(--W) * 0.98);top:calc(var(--W) * -0.18);width:calc(var(--W) * 0.56);z-index:2;opacity:0;transform:rotate(3deg);">
+        <div class="fd-float" style="animation-duration:5.9s;animation-delay:-2.8s;--r:0deg;"><img decoding="async" src="assets/hero/riley-crouch.webp" alt="Riley crouching and smiling" style="display:block;width:100%;height:auto;"></div>
+      </div>
+      <div data-env-note="" data-order="7" data-rot="-6" class="env-stk env-dog1" style="position:absolute;left:calc(var(--W) * -1.18);top:calc(var(--W) * 0.06);width:calc(var(--W) * 0.48);z-index:2;opacity:0;transform:rotate(-6deg);">
+        <div class="fd-float" style="animation-duration:5.2s;animation-delay:-0.4s;--r:0deg;"><img decoding="async" src="assets/hero/dog-1.webp" alt="A curious white dog" style="display:block;width:100%;height:auto;"></div>
+      </div>
+      <div data-env-note="" data-order="8" data-rot="5" class="env-stk env-dog2" style="position:absolute;left:calc(var(--W) * 1.52);top:calc(var(--W) * 0.1);width:calc(var(--W) * 0.42);z-index:2;opacity:0;transform:rotate(5deg);">
+        <div class="fd-float" style="animation-duration:6.1s;animation-delay:-3.3s;--r:0deg;"><img decoding="async" src="assets/hero/dog-2.webp" alt="A shiba in a knit bandana" style="display:block;width:100%;height:auto;"></div>
+      </div>
+      <div data-env-hint="" aria-hidden="true" style="position:absolute;left:-20%;right:-20%;top:calc(100% + 26px);text-align:center;font-family:'Courier Prime',monospace;font-size:15px;color:#2a2b30;opacity:0;">tap the seal to open</div>
     </div>
   </section>
 
