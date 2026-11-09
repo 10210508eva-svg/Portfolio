@@ -7,78 +7,65 @@
 <link rel="icon" type="image/png" href="assets/favicon-riley.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon-riley.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&amp;family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&amp;family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Courier+Prime:wght@400;700&amp;display=swap" rel="stylesheet">
 <style>
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;scroll-padding-top:88px;}
 body{margin:0;background:#f5f4f0;color:#1c1d22;font-family:'Figtree',sans-serif;-webkit-font-smoothing:antialiased;}
 a{color:#4a5d94;}
 a:hover{color:#1c1d22;}
-</style>
-<style id="responsive">
-img,video{max-width:100%;}
+img{max-width:100%;}
 .nav-toggle{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none;}
 .nav-btn{display:none;}
 .site-nav a{display:inline-flex;align-items:center;min-height:44px;}
+.toc a{transition:color .25s,border-color .25s;}
+.toc a:hover{color:#1c1d22!important;}
+.toc a[data-on]{color:#1c1d22!important;border-left-color:#5b6fa8!important;}
+.rv-on .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
+.rv-on .rv.in{opacity:1;transform:none;}
+[data-notes="hidden"] .note-slot{display:none!important;}
+main p:empty{display:none;}
+@media (max-width:1100px){.bulb{right:-8px!important;top:-34px!important;width:48px!important;}}
+main li > p{margin:0;}
+main div > p{margin:0 0 .8em;}
+main div > p:last-child{margin-bottom:0;}
+.imp > p:first-child{font-weight:600;font-size:18px;margin-bottom:4px;}
+.ph{transition:transform .5s cubic-bezier(.2,.7,.2,1);}
+.ph:hover{transform:translateY(-8px);}
+.strip{scrollbar-width:thin;scrollbar-color:#b9c4de transparent;}
+.next-link .arr{display:inline-block;transition:transform .35s cubic-bezier(.2,.7,.2,1);}
+.next-link:hover .arr{transform:translateX(10px);}
+@media (max-width:1040px){.cs-grid{grid-template-columns:minmax(0,1fr)!important;}.toc{display:none!important;}}
+@media (max-width:900px){.proc-step{grid-template-columns:minmax(0,1fr)!important;}.proc-step > .span2{grid-column:auto!important;}}
+@media (max-width:1000px){.ov-arr{display:none;}}
+@media (max-width:640px){.ov-row{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));}.ov-row > a:last-child{grid-column:span 2;}}
+@media (max-width:820px){.two{grid-template-columns:minmax(0,1fr)!important;}.meta{border-left:0!important;padding-left:0!important;padding-top:28px!important;border-top:1px solid rgba(28,29,34,.15);}.tst{grid-template-columns:minmax(0,1fr)!important;}}
 @media (max-width:640px){
   .hdr{padding:10px 20px!important;}
-  .nav-btn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;font-size:26px;line-height:1;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent;}
-  .site-nav{display:none!important;flex-basis:100%;flex-direction:column;gap:0!important;padding-bottom:6px;}
+  .nav-btn{display:flex;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;font-size:26px;cursor:pointer;}
+  .site-nav{display:none!important;flex-basis:100%;flex-direction:column;gap:0!important;}
   .nav-toggle:checked ~ .site-nav{display:flex!important;}
   .site-nav a{min-height:48px;font-size:17px!important;border-top:1px solid rgba(28,29,34,.1);}
+  .hero-row{gap:10px!important;padding:28px 12px!important;}
+  .hero-row img{margin-top:0!important;}
+  .hero-row img{width:28vw!important;}
 }
-@media (max-width:768px){.span2{grid-column:auto!important;}}
-@media (max-width:600px){
-  .hero-h1{left:10%!important;top:40%!important;font-size:15.5vw!important;}
-  .hero-contact{top:9%!important;right:7%!important;font-size:11px!important;line-height:1.5!important;}
-}
-@media (max-width:640px){
-  .polaroid-wrap{margin-top:80px!important;align-self:center!important;}
-  .polaroid-cap{left:0!important;top:-60px!important;font-size:22px!important;}
-}
-@media (max-width:900px){
-  .proj-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:640px!important;gap:44px 28px!important;}
-  .proj-grid > a:last-child:nth-child(odd){grid-column:1 / -1;width:calc(50% - 14px);justify-self:center;}
-  .proj-title{font-size:26px!important;}
-  .proj-desc{font-size:15px!important;}
-}
-@media (max-width:560px){
-  .proj-grid{grid-template-columns:minmax(0,1fr)!important;max-width:360px!important;}
-  .proj-grid > a:last-child:nth-child(odd){width:auto;justify-self:stretch;}
-}
-.pj-h1{overflow-wrap:break-word;}
-@media (max-width:480px){.pj-h1{font-size:clamp(34px,11vw,48px)!important;}}
-@media (max-width:640px){
-  .phone-row{flex-wrap:nowrap!important;gap:10px!important;padding:28px 12px!important;}
-  .phone-row > div{width:27vw!important;border-width:5px!important;border-radius:18px!important;transform:none!important;}
-}
-@media (max-width:480px){.dash-tabs{grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
-@media (max-width:560px){.fmap{grid-template-columns:minmax(0,1fr)!important;gap:4px!important;}}
-@media (max-width:860px){
-  .flow-panel{overflow-x:visible!important;}
-  .flow{display:flex!important;flex-direction:column!important;align-items:center!important;width:100%!important;gap:8px!important;}
-  .f-r1{order:1;flex-direction:column!important;}
-  .f-mode{order:2;}
-  .f-down{order:3;}
-  .f-br{order:4;}
-  .f-r3{order:5;flex-direction:column-reverse!important;}
-  .f-empty{display:none!important;}
-  .f-r1 > span:nth-child(even){display:inline-block;transform:rotate(90deg);}
-  .f-r3 > span:nth-child(even){display:inline-block;transform:rotate(-90deg);}
-  .f-br > span{flex-wrap:wrap;}
-}
-@media (max-width:480px){
-  .find-imgs{flex-direction:column!important;}
-  .find-imgs > figure{flex:none!important;}
-}
-@media (min-width:1440px){html{font-size:17px;}}
 </style>
 <style id="cursor">html,body,*{cursor:url(assets/cursor-pencil.svg) 2 30, auto;}a,a *,button,button *,label{cursor:url(assets/cursor-pencil-hover.svg) 2 30, pointer;}</style>
+<style>.h0:hover{border-color:#5b6fa8 !important;color:#5b6fa8 !important}
+.h1:hover{border-color:#5b6fa8 !important;color:#5b6fa8 !important}
+.h2:hover{border-color:#5b6fa8 !important;color:#5b6fa8 !important}
+.h3:hover{border-color:#5b6fa8 !important;color:#5b6fa8 !important}
+.h4:hover{border-color:#5b6fa8 !important;color:#5b6fa8 !important}
+.h5:hover{background:#1c1d22 !important;color:#f5f4f0 !important}
+.h6:hover{background:#1c1d22 !important;color:#f5f4f0 !important}
+.h7:hover{background:#4a5d94 !important;border-color:#4a5d94 !important;color:#fff !important}
+.h8:hover{background:#1c1d22 !important;color:#f5f4f0 !important}</style>
 </head>
 <body>
-<div style="min-height:100vh;">
-  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,244,240,.97);border-bottom:1px solid rgba(28,29,34,.08);">
-    <div class="hdr" style="max-width:1200px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
-      <a href="index.html" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:21.8px;line-height:1;text-decoration:none;color:#1c1d22;">← Riley Fang</a>
+<div data-notes="shown" style="min-height:100vh;">
+  <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(245,244,240,.96);border-bottom:1px solid rgba(28,29,34,.08);">
+    <div class="hdr" style="max-width:1240px;margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+      <a href="index.html" style="font-family:'Source Serif 4',serif;font-size:21.8px;line-height:1;text-decoration:none;color:#1c1d22;">← Riley Fang</a>
       <input type="checkbox" id="navt" class="nav-toggle" aria-label="Toggle menu">
       <label for="navt" class="nav-btn" aria-hidden="true">☰</label>
       <nav class="site-nav" style="display:flex;gap:clamp(12px,2.5vw,28px);font-family:'Courier Prime',monospace;font-size:15px;flex-wrap:wrap;">
@@ -88,426 +75,314 @@ img,video{max-width:100%;}
       </nav>
     </div>
   </header>
-  <div class="hdr-space" style="height:64px;"></div>
+  <div style="height:64px;"></div>
 
-  <section data-screen-label="Hero" style="max-width:1200px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px) 0;">
-    <div style="font-family:'Courier Prime',monospace;font-size:15px;color:#4a5d94;">UX research &amp; design</div>
-    <h1 class="pj-h1" style="font-weight:700;font-size:clamp(48px,8vw,112px);line-height:.95;letter-spacing:-.02em;margin:18px 0 0;color:#5b6fa8;">Rehabilitation App</h1>
-    <p style="font-size:clamp(19px,1.8vw,24px);line-height:1.5;max-width:36em;margin:28px 0 0;text-wrap:pretty;">A dual-interface app for clinicians and patients. It bridges the two sides and lets patients do rehabilitation training remotely, with XREAL checking each movement.</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:24px;margin-top:48px;padding-top:28px;border-top:1px solid rgba(28,29,34,.15);">
-      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Role</div><div style="font-size:17px;margin-top:6px;">UX research &amp; design</div></div>
-      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Lab</div><div style="font-size:17px;margin-top:6px;">HMER Lab<br>Human-in-Mind Engineering Research</div></div>
-      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Guidance</div><div style="font-size:17px;margin-top:6px;">Hanna Choi &amp; Dr. Jeong</div></div>
-      <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Platform</div><div style="font-size:17px;margin-top:6px;">iOS app + XREAL glasses</div></div>
-    </div>
-    <div class="phone-row" style="display:flex;justify-content:center;gap:clamp(16px,3vw,40px);margin-top:64px;padding:clamp(32px,5vw,64px) 16px;background:#5b6fa8;border-radius:20px;flex-wrap:wrap;">
-      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img decoding="async" src="assets/rehab/p-home.webp" alt="Patient home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);"><img decoding="async" src="assets/rehab/c-home.png" alt="Clinician home" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-      <div style="width:clamp(180px,22vw,260px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:36px;overflow:hidden;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.25);transform:translateY(24px);"><img loading="lazy" decoding="async" src="assets/rehab/p-report.png" alt="Patient report" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-    </div>
+  <section data-screen-label="Hero" style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(20px,4vw,48px) 0;">
+    <div class="rv" style="font-family:'Courier Prime',monospace;font-size:15px;color:#4a5d94;">UX research &amp; design</div>
+    <h1 class="rv" style="font-family:'Figtree',sans-serif;font-weight:700;font-size:clamp(40px,8.6vw,120px);line-height:1;letter-spacing:-.02em;color:#5b6fa8;margin:22px 0 0;overflow-wrap:break-word;">Rehabilitation App</h1>
+    <p class="rv" style="font-size:clamp(19px,1.9vw,24px);line-height:1.6;max-width:30em;margin:32px 0 0;color:#1c1d22;text-wrap:pretty;">A dual-interface app for clinicians and patients. It bridges the two sides and lets patients do rehabilitation training remotely, with XREAL checking each movement.</p>
   </section>
 
-  <section data-screen-label="Overview" style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px 64px;">
-    <div>
-      <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 0;">What is this app</h2>
-    </div>
-    <div class="span2" style="grid-column:span 2;display:flex;flex-direction:column;gap:18px;font-size:19px;line-height:1.65;max-width:38em;">
-      <p style="margin:0;">This is a dual-interface app for both <strong>clinicians and patients</strong>, serving as a bridge to facilitate communication between them and enabling patients to perform rehabilitation training <strong>remotely</strong>.</p>
-      <p style="margin:0;">It aims to increase patient motivation during recovery, thereby improving recovery rates. We use <strong>XREAL</strong> to detect whether the patient’s movements are performed correctly.</p>
-    </div>
-  </section>
-
-  <section data-screen-label="Dashboards" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,96px) clamp(20px,4vw,48px) 0;">
-    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 32px;">Two dashboards, one app</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:20px;">
-      <div style="background:#fff;border-radius:16px;padding:28px;">
-        <div style="display:flex;align-items:center;gap:10px;"><span style="background:#dfe5f2;color:#3f5288;font-size:13px;font-weight:600;padding:4px 10px;border-radius:6px;">PATIENT</span><span style="font-weight:600;font-size:20px;">Dashboard</span></div>
-        <div class="dash-tabs" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;">
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Home</span>
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Rehab</span>
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Report</span>
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Profile</span>
-        </div>
-      </div>
-      <div style="background:#fff;border-radius:16px;padding:28px;">
-        <div style="display:flex;align-items:center;gap:10px;"><span style="background:#3f5288;color:#fff;font-size:13px;font-weight:600;padding:4px 10px;border-radius:6px;">CLINICIAN</span><span style="font-weight:600;font-size:20px;">Dashboard</span></div>
-        <div class="dash-tabs" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:20px;">
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Home</span>
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Message</span>
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Insight</span>
-          <span style="background:#5b6fa8;color:#fff;padding:12px 6px;border-radius:8px;font-size:15px;text-align:center;">Profile</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section data-screen-label="Patient — Game flow" style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px) 0;">
-    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 12px;">Game flow</h2>
-    <p style="font-size:18px;line-height:1.6;max-width:36em;margin:0 0 32px;">How a patient moves from the play button into a Lemon Squeeze session.</p>
-    <div class="flow-panel" style="background:#dfe5f2;border-radius:20px;padding:clamp(20px,3vw,40px);font-size:14px;overflow-x:auto;">
-      <div class="flow" style="display:grid;grid-template-columns:auto auto;column-gap:8px;row-gap:6px;align-items:center;width:max-content;margin:0 auto;">
-        <div class="f-r1" style="display:flex;align-items:center;gap:8px;justify-self:end;"><span style="background:#3f5288;color:#fff;padding:9px 14px;border-radius:999px;font-weight:600;white-space:nowrap;flex:none;">▶ Play button</span><span style="color:#5b6fa8;font-size:16px;flex:none;">→</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Game description / instruction</span><span style="color:#5b6fa8;font-size:16px;flex:none;">→</span></div>
-        <div class="f-mode" style="justify-self:center;"><span style="display:inline-block;background:#5b6fa8;color:#fff;padding:9px 14px;border-radius:8px;font-weight:600;white-space:nowrap;">◆ Mode select</span></div>
-        <div class="f-empty"></div>
-        <div class="f-down" style="justify-self:center;color:#5b6fa8;font-size:16px;line-height:1;">↓</div>
-        <div class="f-r3" style="display:flex;align-items:center;gap:8px;justify-self:end;"><span style="background:#3f5288;color:#fff;padding:9px 14px;border-radius:999px;font-weight:600;white-space:nowrap;flex:none;">End</span><span style="color:#5b6fa8;font-size:16px;flex:none;">←</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Select feedback</span><span style="color:#5b6fa8;font-size:16px;flex:none;">←</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Start playing</span><span style="color:#5b6fa8;font-size:16px;flex:none;">←</span></div>
-        <div class="f-br" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-left:2px solid #5b6fa8;border-right:2px solid #5b6fa8;border-radius:8px;padding:8px 12px;">
-          <span style="display:flex;gap:8px;align-items:center;"><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Practice</span><span style="color:#5b6fa8;font-size:16px;flex:none;">→</span><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Set your own goal</span></span>
-          <span style="display:flex;gap:8px;align-items:center;"><span style="background:#fff;color:#1c1d22;border:1.5px solid #b9c4de;padding:9px 12px;border-radius:8px;white-space:nowrap;flex:none;">Recommend</span></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-    <section data-screen-label="Patient screen" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 0;">
-      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
-        <div style="flex:1 1 360px;min-width:0;">
-          
-          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Home</h3>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Home</div>
-            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Goal achievement</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Completion rate (%) · Progress ring · 3 of 5 goals today</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Today’s programme</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Lemon game at different difficulty levels · Opens the exercise instruction page</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">You are getting stronger</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Left / right hand · Score in points · Weekly change (%)</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">This week</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Current streak · Best streak</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Clinician message</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Latest note · Open conversation</div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
-          
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-home.webp" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-          
-        </div>
-      </div>
-    </section>
-  
-    <section data-screen-label="Patient screen" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 0;">
-      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
-        <div style="flex:1 1 360px;min-width:0;">
-          
-          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Rehabilitation</h3>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Rehabilitation</div>
-            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Ranking &amp; achievement</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Streak / badges · Weekly leaderboard · Goal progress bars</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Goal &amp; feedback tiles</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">3 of 5 today · 1 new clinician note</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Training · Lemon Squeeze</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Demo video · Description · Benefits · Step-by-step instructions</div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
-          
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-rehab.png" alt="Rehabilitation screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-          
-        </div>
-      </div>
-    </section>
-  
-    <section data-screen-label="Patient screen" style="max-width:1200px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,48px) 0;">
-      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
-        <div style="flex:1 1 360px;min-width:0;">
-          
-          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Report</h3>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Report</div>
-            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Latest data</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Main metric (points) · Left / right hand toggle · Target range 60–80</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Improvement threshold</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Trend line · On-track indicator</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">History</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Week, month, 3 months · Bar chart</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Other</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Personal best · Avg score this week · Total squeezes</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Share</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Email · PDF · Clinician portal · Copy summary link</div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
-          
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-report.png" alt="Report screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-          
-        </div>
-      </div>
-    </section>
-  
-
-  <section data-screen-label="Clinician side intro" style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 0;">
-    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 0;">Tools for the care team</h2>
-  </section>
-
-  
-    <section data-screen-label="Clinician screen" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 0;">
-      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
-        <div style="flex:1 1 360px;min-width:0;">
-          
-          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Home</h3>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Home</div>
-            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Patient roster</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Condition and affected hand · Last activity and goal % · Send reminder</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Search bar / filter</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">By name · By condition · By affected hand</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Today (task queue)</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">3 tasks · Jump to patient or chat</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Patient reports</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">All patients · Reps, streak, goal</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Patient detail</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Overview: weekly goal ring, avg + peak score, session history · Trends: grip score line, pain level over time, performance vs. baseline · Notes: clinical notes, add note · Record: patient info</div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
-          
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-home.png" alt="Home screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-          
-        </div>
-      </div>
-    </section>
-  
-    <section data-screen-label="Clinician screen" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 0;">
-      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
-        <div style="flex:1 1 360px;min-width:0;">
-          
-          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Message</h3>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Message</div>
-            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Plan builder</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Quick presets · Easy / Regular / Hard · Squeeze count, peak %, target score · Publish plan</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Conversation list</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Unread markers · Search by name or text</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Chat box</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Threaded conversation · Quick replies: six canned clinical responses · Set goal: opens the plan builder</div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
-          
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-message.png" alt="Message screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-          
-        </div>
-      </div>
-    </section>
-  
-    <section data-screen-label="Clinician screen" style="max-width:1200px;margin:0 auto;padding:clamp(56px,7vw,88px) clamp(20px,4vw,48px) 0;">
-      <div style="display:flex;flex-wrap:wrap;gap:40px clamp(28px,4vw,64px);align-items:center;">
-        <div style="flex:1 1 360px;min-width:0;">
-          
-          <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 24px;">Insight</h3>
-          <div style="display:flex;flex-direction:column;gap:12px;">
-            <div style="align-self:flex-start;background:#5b6fa8;color:#fff;padding:10px 18px;border-radius:10px;font-weight:600;font-size:16px;">Insight</div>
-            <div style="display:flex;flex-direction:column;gap:10px;border-left:2px solid #b9c4de;margin-left:20px;padding-left:20px;">
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">All patients’ information</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Active patients · Avg goal completion · Avg streak · Sessions this week</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Score bar graph</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Cohort average, points</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Completion rate</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">Weekly compliance line</div>
-                </div>
-              
-                <div class="fmap" style="background:#fff;border-radius:12px;padding:14px 18px;display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:8px 16px;align-items:start;">
-                  <div style="color:#3f5288;font-weight:600;font-size:16px;">Performance detail</div>
-                  <div style="font-size:15px;line-height:1.55;color:#3b3d45;">By treatment category · Patients, adherence, change</div>
-                </div>
-              
-            </div>
-          </div>
-        </div>
-        <div style="flex:0 0 auto;margin:0 auto;display:flex;justify-content:center;gap:20px;">
-          
-            <div style="width:clamp(200px,22vw,250px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-insight.png" alt="Insight screen" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-          
-        </div>
-      </div>
-    </section>
-  
-
-  <section data-screen-label="Profiles" style="max-width:1200px;margin:0 auto;padding:clamp(80px,10vw,128px) clamp(20px,4vw,48px) 0;">
+  <div class="cs-grid" style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:minmax(0,1fr);">
     
-    <h3 style="font-weight:600;font-size:clamp(28px,3.4vw,40px);line-height:1.1;margin:10px 0 12px;">Profile</h3>
-    <p style="font-size:18px;line-height:1.6;max-width:36em;margin:0;">Patients see their recovery stats and pair their XREAL glasses; clinicians see license details, an audit log and their clinical obligations.</p>
-    <div style="display:flex;justify-content:center;gap:clamp(20px,5vw,72px);flex-wrap:wrap;margin-top:40px;">
-      <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;">
-        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/p-profile.png" alt="Patient profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-        <figcaption style="font-family:'Courier Prime',monospace;font-size:14px;">Patient</figcaption>
-      </figure>
-      <figure style="margin:0;display:flex;flex-direction:column;align-items:center;gap:14px;">
-        <div style="width:clamp(200px,24vw,270px);aspect-ratio:9/19.5;border:9px solid #16171b;border-radius:38px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(28,29,34,.18);"><img loading="lazy" decoding="async" src="assets/rehab/c-profile.png" alt="Clinician profile" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block;"></div>
-        <figcaption style="font-family:'Courier Prime',monospace;font-size:14px;">Clinician</figcaption>
-      </figure>
-    </div>
-  </section>
 
-  <section data-screen-label="Where two sides connect" style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 0;">
-    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 32px;">Where two sides connect</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px;">
-      
-        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
-            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">PATIENT</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">CLINICIAN</span>
-          </div>
-          <div style="font-weight:600;font-size:20px;">Session results</div>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">Completing a session sends squeezes, peak %, points and the difficulty rating into the patient’s record and session history.</p>
+    <main style="min-width:0;">
+      <section id="overview" data-screen-label="Overview" style="padding-top:clamp(40px,5vw,64px);">
+        
+        <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:28px 40px;margin-top:0;padding-top:32px;border-top:1px solid rgba(28,29,34,.15);">
+          <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Role</div><div style="font-size:17px;line-height:1.45;margin-top:8px;">UX research &amp; design</div></div>
+          <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Lab</div><div style="font-size:17px;line-height:1.45;margin-top:8px;">HMER Lab<br>Human-in-Mind Engineering Research</div></div>
+          <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Guidance</div><div style="font-size:17px;line-height:1.45;margin-top:8px;">Hanna Choi &amp; Dr. Jeong</div></div>
+          <div><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Platform</div><div style="font-size:17px;line-height:1.45;margin-top:8px;">iOS app + XREAL glasses</div></div>
         </div>
-      
-        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
-            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">CLINICIAN</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">PATIENT</span>
+        <div class="two rv" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,96px);margin-top:56px;align-items:start;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Project overview</div>
+            <div style="display:flex;flex-direction:column;gap:16px;font-size:18px;line-height:1.65;margin-top:14px;">
+              <div style="margin:0;"><p data-pm-slice="1 1 []">Rehabilitation requires consistency, but staying motivated can be difficult, especially when patients are exercising at home without direct support from their clinicians.</p><p>Our project explores how gamification, movement tracking, and AI-guided exercises can make remote rehabilitation more engaging and accessible. We are developing a patient app and a clinician dashboard that connect both sides, helping patients stay motivated while giving clinicians a better way to monitor progress and communicate with patients.</p><p>I joined the ASU Human-In-Mind Engineering Lab as a summer research intern and continued working remotely during the school year. My main responsibility is designing and prototyping both interfaces, from early research and information architecture to wireframes and UI design.</p></div>
+              
+            </div>
           </div>
-          <div style="font-weight:600;font-size:20px;">Prescribed plan</div>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">Publishing a plan sets the level and targets that the patient’s Recommended mode runs against.</p>
-        </div>
-      
-        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
-            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">BOTH</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">BOTH</span>
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Problem</div>
+            <div style="display:flex;flex-direction:column;margin-top:14px;">
+              <div style="padding:18px 0;border-top:1px solid rgba(28,29,34,.15);"><div style="font-weight:600;font-size:19px;"><p data-pm-slice="1 1 []"><strong>Staying motivated during rehabilitation is difficult</strong></p></div><div style="margin:8px 0 0;font-size:18px;line-height:1.6;color:#3b3d45;"><p data-pm-slice="1 1 []">Repetitive exercises can become boring, especially when patients need to complete them independently at home.</p></div></div>
+              <div style="padding:18px 0;border-top:1px solid rgba(28,29,34,.15);"><div style="font-weight:600;font-size:19px;"><p data-pm-slice="1 1 []"><strong>Patients need a clearer way to understand their progress</strong></p></div><div style="margin:8px 0 0;font-size:18px;line-height:1.6;color:#3b3d45;"><p data-pm-slice="1 1 []">Without accessible progress reports and feedback, it can be difficult for patients to see how their exercises are helping.</p></div></div>
+              <div style="padding:18px 0;border-top:1px solid rgba(28,29,34,.15);border-bottom:1px solid rgba(28,29,34,.15);"><div style="font-weight:600;font-size:19px;"><p data-pm-slice="1 1 []"><strong>Communication between patients and clinicians can be limited</strong></p></div><div style="margin:8px 0 0;font-size:18px;line-height:1.6;color:#3b3d45;"><p data-pm-slice="1 1 []">Clinicians need an easier way to monitor exercise progress and stay connected with patients between appointments.</p></div></div>
+            </div>
           </div>
-          <div style="font-weight:600;font-size:20px;">Messaging</div>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">One thread: the patient writes in Clinician feedback, the clinician answers from Messages, optionally via quick replies.</p>
+          
         </div>
-      
-        <div style="background:#fff;border-radius:16px;padding:24px 26px;display:flex;flex-direction:column;gap:12px;">
-          <div style="display:flex;align-items:center;gap:10px;font-size:12px;font-weight:600;letter-spacing:.04em;">
-            <span style="background:#dfe5f2;color:#3f5288;padding:4px 10px;border-radius:6px;">CLINICIAN</span><span>→</span><span style="background:#3f5288;color:#fff;padding:4px 10px;border-radius:6px;">PATIENT</span>
-          </div>
-          <div style="font-weight:600;font-size:20px;">Reminders &amp; notes</div>
-          <p style="margin:0;font-size:16px;line-height:1.6;color:#3b3d45;">Send reminder nudges the patient to train; clinical notes stay on the clinician side and shape the next plan.</p>
-        </div>
-      
-    </div>
-  </section>
+      </section>
 
-  <section data-screen-label="Key findings" style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 0;">
-    <h2 style="font-weight:600;font-size:clamp(32px,4vw,48px);line-height:1.05;margin:12px 0 28px;">Key findings after testing</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px;align-items:stretch;">
-      <div style="display:flex;flex-direction:column;gap:24px;background:#dfe5f2;border-radius:20px;padding:clamp(20px,3vw,36px);">
-        <div style="min-width:0;">
-          <div style="font-family:'Courier Prime',monospace;color:#5b6fa8;font-size:20px;font-weight:700;">01</div>
-          <div style="font-weight:600;font-size:22px;line-height:1.3;margin-top:8px;">Report charts needed more explanation</div>
-          <p style="margin:10px 0 0;font-size:16px;line-height:1.6;color:#3b3d45;">Testers weren’t sure how to read the trend line and history bars, so each chart now has a “What this shows” panel.</p>
+      <section id="highlights" data-screen-label="Highlights" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Design highlights</div>
+        <h2 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;max-width:16em;">One training session, start to finish</h2>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:40px;padding:clamp(24px,3vw,40px);background:#dfe5f2;border-radius:20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:14px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m11-home-data.webp" alt="Home" style="display:block;width:100%;height:auto;"><figcaption><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">01</div><div style="font-weight:600;font-size:17px;margin-top:4px;">See today’s goals</div><p style="margin:6px 0 0;font-size:16px;line-height:1.5;color:#3b3d45;">Progress, weekly streak and today’s task up front.</p></figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:14px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m22-report.webp" alt="Report" style="display:block;width:100%;height:auto;"><figcaption><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">02</div><div style="font-weight:600;font-size:17px;margin-top:4px;">View your report</div><p style="margin:6px 0 0;font-size:16px;line-height:1.5;color:#3b3d45;">You can view all of your report in here, including how far away from your final goal and how many you improve</p></figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:14px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m19-live.webp" alt="Live session" style="display:block;width:100%;height:auto;"><figcaption><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">03</div><div style="font-weight:600;font-size:17px;margin-top:4px;">Lemon squeeze game</div><p style="margin:6px 0 0;font-size:16px;line-height:1.5;color:#3b3d45;">The rehabilitation exercise we have,&nbsp;</p></figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:14px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m40-overview.webp" alt="Clinician’s patient overview" style="display:block;width:100%;height:auto;"><figcaption><div style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">04</div><div style="font-weight:600;font-size:17px;margin-top:4px;">The clinician follows up</div><p style="margin:6px 0 0;font-size:16px;line-height:1.5;color:#3b3d45;">Results land in the patient’s record, ready for a note or a new plan.</p></figcaption></figure>
         </div>
-        <div class="find-imgs" style="flex:1;min-width:0;display:flex;gap:12px;">
-          <figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
-            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img loading="lazy" decoding="async" src="assets/rehab/f-threshold.png" alt="Improvement threshold chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
-            <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">Improvement threshold</figcaption>
-          </figure><figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
-            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img loading="lazy" decoding="async" src="assets/rehab/f-history.png" alt="History chart with explanation" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
-            <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">History</figcaption>
-          </figure>
-        </div>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:24px;background:#dfe5f2;border-radius:20px;padding:clamp(20px,3vw,36px);">
-        <div style="min-width:0;">
-          <div style="font-family:'Courier Prime',monospace;color:#5b6fa8;font-size:20px;font-weight:700;">02</div>
-          <div style="font-weight:600;font-size:22px;line-height:1.3;margin-top:8px;">Add a baseline test and a monthly test for the Lemon game</div>
-          <p style="margin:10px 0 0;font-size:16px;line-height:1.6;color:#3b3d45;">A weekly Baseline Game now sits under Today’s Task, giving a consistent reference point for progress.</p>
-        </div>
-        <div class="find-imgs" style="flex:1;min-width:0;display:flex;gap:12px;">
-          <figure style="margin:0;flex:1 1 0;min-width:0;background:#fff;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 22px rgba(28,29,34,.08);">
-            <div style="height:clamp(240px,28vw,340px);display:flex;align-items:center;justify-content:center;"><img loading="lazy" decoding="async" src="assets/rehab/f-task.png" alt="Today’s task with the Baseline Game" style="max-width:100%;max-height:100%;object-fit:contain;display:block;"></div>
-            <figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#3f5288;">Today’s Task + Baseline Game</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <footer style="max-width:1200px;margin:0 auto;padding:clamp(96px,12vw,160px) clamp(20px,4vw,48px) 56px;">
-    <a href="cseed.html" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;text-decoration:none;color:#1c1d22;border-top:1px solid rgba(28,29,34,.15);padding-top:28px;">
-      <span><span style="display:block;font-family:'Courier Prime',monospace;font-size:14px;color:#6b6d76;">Next project</span><span style="display:block;font-weight:600;font-size:clamp(36px,5vw,64px);line-height:1.05;margin-top:8px;">CSEED Website →</span></span>
+      <section id="impact" data-screen-label="Impact" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Impact</div>
+        <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:32px 40px;margin-top:20px;">
+          <div style="border-top:1.5px solid #1c1d22;padding-top:16px;"><div style="font-family:'Source Serif 4',serif;font-size:clamp(44px,5vw,64px);line-height:1;color:#5b6fa8;">2</div><div class="imp" style="margin:12px 0 0;font-size:18px;line-height:1.55;color:#3b3d45;"><p>User interfaces</p><p>Designed experiences for both patients and clinicians.</p></div></div>
+          <div style="border-top:1.5px solid #1c1d22;padding-top:16px;"><div style="font-family:'Source Serif 4',serif;font-size:clamp(44px,5vw,64px);line-height:1;color:#5b6fa8;">~50</div><div class="imp" style="margin:12px 0 0;font-size:18px;line-height:1.55;color:#3b3d45;"><p>Design screens</p><p>Created wireframes and interface designs across both experiences.</p></div></div>
+          <div style="border-top:1.5px solid #1c1d22;padding-top:16px;"><div style="font-family:'Source Serif 4',serif;font-size:clamp(44px,5vw,64px);line-height:1;color:#5b6fa8;">5</div><div class="imp" style="margin:12px 0 0;font-size:18px;line-height:1.55;color:#3b3d45;"><p>Design stages</p><p>From literature review and competitive analysis to IA and wireframing.</p></div></div>
+        </div>
+      </section>
+
+      <section id="process" data-screen-label="Design process" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="two rv" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:center;">
+          <div>
+            <div style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Design process</div>
+            <h2 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;">From research to wireframes</h2>
+            <p style="font-size:18px;line-height:1.65;margin:18px 0 0;color:#3b3d45;">I explored user needs, analysed existing solutions and structured the experience for both patients and clinicians.</p>
+          </div>
+          
+        </div>
+        <div class="rv ov-row" style="display:flex;gap:10px;margin-top:48px;padding:clamp(18px,2.4vw,28px);background:#dfe5f2;border-radius:18px;"><a class="h0" href="#proc-research" style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:4px;min-height:44px;padding:14px 14px;border:1.5px solid rgba(28,29,34,.2);border-radius:12px;text-decoration:none;color:#1c1d22;background:#fff;"><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">01</span><span style="font-weight:600;font-size:17px;">Research</span></a><span aria-hidden="true" class="ov-arr" style="align-self:center;color:#b9c4de;font-size:18px;">→</span><a class="h1" href="#proc-analyze" style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:4px;min-height:44px;padding:14px 14px;border:1.5px solid rgba(28,29,34,.2);border-radius:12px;text-decoration:none;color:#1c1d22;background:#fff;"><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">02</span><span style="font-weight:600;font-size:17px;">Analyze</span></a><span aria-hidden="true" class="ov-arr" style="align-self:center;color:#b9c4de;font-size:18px;">→</span><a class="h2" href="#proc-define" style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:4px;min-height:44px;padding:14px 14px;border:1.5px solid rgba(28,29,34,.2);border-radius:12px;text-decoration:none;color:#1c1d22;background:#fff;"><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">03</span><span style="font-weight:600;font-size:17px;">Define</span></a><span aria-hidden="true" class="ov-arr" style="align-self:center;color:#b9c4de;font-size:18px;">→</span><a class="h3" href="#proc-structure" style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:4px;min-height:44px;padding:14px 14px;border:1.5px solid rgba(28,29,34,.2);border-radius:12px;text-decoration:none;color:#1c1d22;background:#fff;"><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">04</span><span style="font-weight:600;font-size:17px;">Structure</span></a><span aria-hidden="true" class="ov-arr" style="align-self:center;color:#b9c4de;font-size:18px;">→</span><a class="h4" href="#proc-design" style="flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:4px;min-height:44px;padding:14px 14px;border:1.5px solid rgba(28,29,34,.2);border-radius:12px;text-decoration:none;color:#1c1d22;background:#fff;"><span style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">05</span><span style="font-weight:600;font-size:17px;">Design</span></a></div>
+        <div style="margin-top:clamp(56px,6vw,80px);">
+          <div class="rv proc-step" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,.85fr);gap:clamp(20px,3vw,40px);padding:0 0 clamp(56px,6vw,80px) 40px;align-items:start;">
+            <span aria-hidden="true" style="position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #5b6fa8;background:#f5f4f0;box-sizing:border-box;"></span>
+            <span aria-hidden="true" style="position:absolute;left:11px;top:22px;bottom:0;width:2px;background:#dde1ea;"></span>
+            <div id="proc-research" class="span2" style="grid-column:1 / 3;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">01</div>
+              <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin:6px 0 0;">Background research &amp; literature review</h3>
+              <div style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;"><p data-pm-slice="1 1 []">I started by reviewing research papers about game-based rehabilitation, patient motivation, and EMG technology. I focused on understanding the methods used in previous studies and how they could help us design a better rehabilitation experience.</p><p>I also looked into the needs of patients and clinicians, which helped me think about what information and features should be included in each interface.</p></div>
+            </div>
+            <div style="border-left:2px solid #b9c4de;padding:4px 0 4px 18px;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">Key takeaways</div>
+              <ul style="margin: 10px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap:12px;font-size:17px;line-height:1.55;color:#3b3d45;"><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:469,&quot;end&quot;:798},&quot;regular_list_item&quot;,{&quot;start&quot;:469,&quot;end&quot;:564}]">Motivation should be considered throughout the patient experience, not just during exercises.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:469,&quot;end&quot;:798},&quot;regular_list_item&quot;,{&quot;start&quot;:565,&quot;end&quot;:689}]">Patients and clinicians need different types of information, so both interfaces should be designed around their own goals.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:469,&quot;end&quot;:798},&quot;regular_list_item&quot;,{&quot;start&quot;:690,&quot;end&quot;:798}]">Research helped me make more thoughtful decisions about what features to include and how to organize them.</p></li></ul>
+            </div>
+            
+          </div>
+          <div class="rv proc-step" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,.85fr);gap:clamp(20px,3vw,40px);padding:0 0 clamp(56px,6vw,80px) 40px;align-items:start;">
+            <span aria-hidden="true" style="position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #5b6fa8;background:#f5f4f0;box-sizing:border-box;"></span>
+            <span aria-hidden="true" style="position:absolute;left:11px;top:22px;bottom:0;width:2px;background:#dde1ea;"></span>
+            <div id="proc-analyze">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">02</div>
+              <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin:6px 0 0;">Competitive analysis</h3>
+              <div style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;"><p data-pm-slice="1 1 []">I explored existing rehabilitation platforms to understand how they organize their features and present information to patients and clinicians. I paid extra attention to the home page and progress reports, since I wanted to make sure users could quickly find the information they needed.</p><p>Medbridge was one of my main references, but I also compared other platforms to explore different approaches to rehabilitation, tracking, and patient management.</p></div>
+            </div>
+            <div style="min-width:0;"><div style="overflow-x:auto;"><table style="width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed;">
+                <thead><tr><th style="width:40%;text-align:left;padding:0 12px 10px 0;font-family:'Courier Prime',monospace;font-weight:400;font-size:12px;color:#6b6d76;">Plateform</th><th style="text-align:left;padding:0 0 10px 12px;font-family:'Courier Prime',monospace;font-weight:400;font-size:12px;color:#6b6d76;">main focus</th></tr></thead>
+                <tbody><tr><td style="padding:12px 12px 12px 0;border-top:1px solid rgba(28,29,34,.1);font-size:16px;font-weight:600;vertical-align:top;">Neofect TeleRehab</td><td style="padding:12px 0 12px 12px;border-top:1px solid rgba(28,29,34,.1);font-size:16px;line-height:1.45;color:#3b3d45;">Remote rehabilitation and clinician monitoring</td></tr><tr><td style="padding:12px 12px 12px 0;border-top:1px solid rgba(28,29,34,.1);font-size:16px;font-weight:600;vertical-align:top;">Prompt Health</td><td style="padding:12px 0 12px 12px;border-top:1px solid rgba(28,29,34,.1);font-size:16px;line-height:1.45;color:#3b3d45;">Patient management and clinical operations</td></tr><tr><td style="padding:12px 12px 12px 0;border-top:1px solid rgba(28,29,34,.1);font-size:16px;font-weight:600;vertical-align:top;">XRHealth</td><td style="padding:12px 0 12px 12px;border-top:1px solid rgba(28,29,34,.1);font-size:16px;line-height:1.45;color:#3b3d45;">Motion tracking and feedback</td></tr><tr><td style="padding:12px 12px 12px 0;border-top:1px solid rgba(28,29,34,.1);font-size:16px;font-weight:600;vertical-align:top;">Medbridge</td><td style="padding:12px 0 12px 12px;border-top:1px solid rgba(28,29,34,.1);font-size:16px;line-height:1.45;color:#3b3d45;">Home exercises and progress tracking</td></tr><tr><td style="padding:12px 12px 12px 0;border-top:1px solid rgba(28,29,34,.1);font-size:16px;font-weight:600;vertical-align:top;">Squegg PRO</td><td style="padding:12px 0 12px 12px;border-top:1px solid rgba(28,29,34,.1);font-size:16px;line-height:1.45;color:#3b3d45;">Grip exercises and gamification</td></tr></tbody>
+              </table></div></div>
+            <div style="border-left:2px solid #b9c4de;padding:4px 0 4px 18px;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">Key takeaways</div>
+              <ul style="margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.55;color:#3b3d45;"><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:501,&quot;end&quot;:838},&quot;regular_list_item&quot;,{&quot;start&quot;:501,&quot;end&quot;:584}]">Progress reports are important, but they need to be easy for users to understand.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:501,&quot;end&quot;:838},&quot;regular_list_item&quot;,{&quot;start&quot;:585,&quot;end&quot;:737}]">Existing platforms gave me useful references for tracking and managing rehabilitation, but I wanted to put more focus on motivation and communication.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:501,&quot;end&quot;:838},&quot;regular_list_item&quot;,{&quot;start&quot;:738,&quot;end&quot;:838}]">I wanted our app to feel easy to start using without overwhelming patients with too many features.</p></li></ul>
+            </div>
+          </div>
+          <div class="rv proc-step" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,.85fr);gap:clamp(20px,3vw,40px);padding:0 0 clamp(56px,6vw,80px) 40px;align-items:start;">
+            <span aria-hidden="true" style="position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #5b6fa8;background:#f5f4f0;box-sizing:border-box;"></span>
+            <span aria-hidden="true" style="position:absolute;left:11px;top:22px;bottom:0;width:2px;background:#dde1ea;"></span>
+            <div id="proc-define">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">03</div>
+              <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin:6px 0 0;">User needs &amp; feature definition</h3>
+              <div style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;"><p data-pm-slice="1 1 []">After reviewing the research and existing applications, I started defining what patients and clinicians would need from our platform.</p><p>Even though they are using the same system, their goals are different. Patients need an experience that encourages them to keep exercising, while clinicians need a clear way to manage patients and understand their progress.</p></div>
+            </div>
+            <div style="min-width:0;"><div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:20px;">
+                <div style="border-top:1.5px solid #1c1d22;padding-top:12px;"><div style="font-weight:600;font-size:17px;">Patient</div><ul style="margin:8px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:1.5;color:#3b3d45;"><li><p>Complete rehabilitation exercises</p></li><li><p>Track exercise streaks and progress</p></li><li><p>View badges and anonymous leaderboards</p></li><li><p>Message their clinician</p></li><li><p>Review rehabilitation reports</p></li></ul></div>
+                <div style="border-top:1.5px solid #1c1d22;padding-top:12px;"><div style="font-weight:600;font-size:17px;">Clinician</div><ul style="margin:8px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:17px;line-height:1.5;color:#3b3d45;"><li><p>View patient roster and summaries</p></li><li><p>Track exercise progress and trends</p></li><li><p>Set exercise goals</p></li><li><p>Review patient notes and records</p></li><li><p>Communicate with patients</p></li></ul></div>
+              </div></div>
+            <div style="border-left:2px solid #b9c4de;padding:4px 0 4px 18px;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">Key takeaways</div>
+              <ul style="margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.55;color:#3b3d45;"><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:780,&quot;end&quot;:1003},&quot;regular_list_item&quot;,{&quot;start&quot;:780,&quot;end&quot;:843}]">Patients need motivation and an easy way to access exercises.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:780,&quot;end&quot;:1003},&quot;regular_list_item&quot;,{&quot;start&quot;:844,&quot;end&quot;:925}]">Clinicians need organized information that helps them manage multiple patients.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:780,&quot;end&quot;:1003},&quot;regular_list_item&quot;,{&quot;start&quot;:926,&quot;end&quot;:1003}]">Both interfaces should feel connected while supporting different workflows.</p></li></ul>
+            </div>
+          </div>
+          <div class="rv proc-step" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,.85fr);gap:clamp(20px,3vw,40px);padding:0 0 clamp(56px,6vw,80px) 40px;align-items:start;">
+            <span aria-hidden="true" style="position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #5b6fa8;background:#f5f4f0;box-sizing:border-box;"></span>
+            <span aria-hidden="true" style="position:absolute;left:11px;top:22px;bottom:0;width:2px;background:#dde1ea;"></span>
+            <div id="proc-structure" class="span2" style="grid-column:1 / 3;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">04</div>
+              <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin:6px 0 0;">Information architecture</h3>
+              <div style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;"><p data-pm-slice="1 1 []">One of my biggest challenges was figuring out how to organize all the features without making the app too complicated.</p><p>I created separate information architectures for patients and clinicians. I tried to think from each user's perspective and imagine what they would want to access first.</p><p>I had a lot of ideas at the beginning, but I wanted to keep the navigation simple. I eventually organized the main features into four tabs for each interface, focusing on the information users would need most often.</p><p></p></div>
+            <div style="margin-top:24px;max-width:420px;"><a class="h5" href="https://www.figma.com/design/qxwn8jQsiBGRIabLLRON46/IA?node-id=0-1&amp;t=KdYvNcreEgn92SI9-1" target="_blank" rel="noopener" data-figma-link="" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;box-sizing:border-box;padding:22px 24px;border:1.5px solid #1c1d22;border-radius:14px;text-decoration:none;color:#1c1d22;"><span><span style="display:block;font-weight:600;font-size:18px;">View information architecture</span><span style="display:block;font-family:'Courier Prime',monospace;font-size:13px;margin-top:6px;opacity:.7;">Opens in Figma</span></span><span aria-hidden="true" style="font-size:20px;">↗</span></a></div>
+            </div>
+            
+            <div style="border-left:2px solid #b9c4de;padding:4px 0 4px 18px;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">Key takeaways</div>
+              <ul style="margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.55;color:#3b3d45;"><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:561,&quot;end&quot;:830},&quot;regular_list_item&quot;,{&quot;start&quot;:561,&quot;end&quot;:624}]">Having more features doesn't always mean a better experience.</p></li><li><p>I needed to prioritize the most important information instead of giving everything the same level of attention.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:561,&quot;end&quot;:830},&quot;regular_list_item&quot;,{&quot;start&quot;:739,&quot;end&quot;:830}]">Keeping both interfaces to four main tabs helped me build a clearer navigation structure.</p></li></ul>
+            </div>
+          </div>
+          <div class="rv proc-step" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr) minmax(0,.85fr);gap:clamp(20px,3vw,40px);padding:0 0 0 40px;align-items:start;">
+            <span aria-hidden="true" style="position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #5b6fa8;background:#f5f4f0;box-sizing:border-box;"></span>
+            
+            <div id="proc-design" class="span2" style="grid-column:1 / 3;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#5b6fa8;">05</div>
+              <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(22px,2.2vw,28px);line-height:1.15;margin:6px 0 0;">Low-fidelity wireframes</h3>
+              <div style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;"><p data-pm-slice="1 1 []">I started with the patient's home page because I felt it was one of the most important parts of the app. I wanted to make sure the main features were easy to find and that the rest of the experience could connect naturally to it.</p><p>Throughout the process, I received a lot of feedback from my PhD mentor, Hanna, especially on the patient's home page. I made several changes based on our discussions and continued refining both interfaces.</p><p>I also wanted to give equal attention to the patient and clinician sides. Even though their needs are different, I didn't want either interface to feel less complete than the other.</p></div>
+            <div style="margin-top:24px;max-width:420px;"><a class="h6" href="https://www.figma.com/design/6oHRCfzQVpUol3ZpyuVVBg/wireframe?node-id=0-1&amp;t=KdYvNcreEgn92SI9-1" target="_blank" rel="noopener" data-figma-link="" style="display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;box-sizing:border-box;padding:22px 24px;border:1.5px solid #1c1d22;border-radius:14px;text-decoration:none;color:#1c1d22;"><span><span style="display:block;font-weight:600;font-size:18px;">View wireframes</span><span style="display:block;font-family:'Courier Prime',monospace;font-size:13px;margin-top:6px;opacity:.7;">Opens in Figma</span></span><span aria-hidden="true" style="font-size:20px;">↗</span></a></div>
+            </div>
+            
+            <div style="border-left:2px solid #b9c4de;padding:4px 0 4px 18px;">
+              <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">Key takeaways</div>
+              <ul style="margin:10px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:12px;font-size:17px;line-height:1.55;color:#3b3d45;"><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:674,&quot;end&quot;:937},&quot;regular_list_item&quot;,{&quot;start&quot;:674,&quot;end&quot;:753}]">The home page helped establish the overall structure for the rest of the app.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:674,&quot;end&quot;:937},&quot;regular_list_item&quot;,{&quot;start&quot;:754,&quot;end&quot;:832}]">Feedback helped me rethink how information and features should be presented.</p></li><li><p data-pm-slice="1 1 [&quot;list&quot;,{&quot;spread&quot;:false,&quot;start&quot;:674,&quot;end&quot;:937},&quot;regular_list_item&quot;,{&quot;start&quot;:833,&quot;end&quot;:937}]">Designing for two user groups meant balancing different needs while keeping the experience consistent.</p></li></ul>
+            </div>
+          </div>
+        </div>
+        <aside class="note-slot rv" style="position:relative;margin-top: 56px; max-width: 36em; border: 1.5px dashed #b9c4de; border-radius: 12px; padding: 18px 22px; background: rgba(255,255,255,.55)">
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">✎ My thinking</div><svg class="bulb" aria-hidden="true" viewBox="0 0 80 96" style="position:absolute;right:-74px;top:-30px;width:64px;height:auto;overflow:visible;transform:rotate(10deg);"><g fill="none" stroke="#3f5f8a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M40 22c-13 0-22 9.5-21.5 21.5.3 8 4.6 12.6 8.4 17 2.4 2.8 3.4 5.4 3.6 9.5h19c.3-4.2 1.4-6.8 3.9-9.6 3.9-4.4 8.3-9.2 8.1-17.4C61.2 31 52.6 21.7 40 22z" fill="#fff6c9"></path><path d="M31 75.5c6 1.2 12.3 1.1 18.4-.2M32.2 81c5.2 1 10.6.9 15.6-.3M35.5 86.5c3.2.8 6.4.8 9.4 0"></path><path d="M36 69c-.8-6.5-2.6-12-5.5-16.5M44.5 69c.6-6.4 2.4-11.8 5.6-16.4M30.6 52.6c3.2 2.1 6.4 2.3 9.5.4 3.1 1.9 6.4 1.7 9.9-.4"></path><path d="M40 4.5v9M12.5 15.5l6.2 6.4M67.8 15.3l-6.4 6.5M3.5 42h8.8M68 42.5h8.6" stroke="#5b6fa8"></path><path d="M30.5 31.5c2.2-2.4 5-3.8 8.3-4.1" stroke-width="2" stroke="#e0a72a"></path></g></svg>
+          <div style="margin:8px 0 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:18px;line-height:1.55;color:#6b6d76;"><p data-pm-slice="1 1 []">One thing I kept thinking about during this project was how to make the app useful without making it too complicated.</p><p>I had a lot of ideas for both interfaces, but I realized that I couldn't put everything on the home page. I needed to think about what users would actually want to see first and what information could be placed somewhere else.</p><p>I'm especially proud of the clinician's home page because I came up with the layout and organization myself. I wanted clinicians to have a clear overview of their patients and be able to access more detailed information when needed.</p></div>
+        </aside>
+      </section>
+
+      <section id="learnings" data-screen-label="Learnings" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Key learnings</div>
+        <h2 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;max-width:16em;">What I’d carry forward</h2>
+        <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:32px 40px;margin-top:40px;">
+          <div style="border-top:1.5px solid #1c1d22;padding-top:16px;"><div style="font-family:'Courier Prime',monospace;font-size:14px;color:#5b6fa8;">What I learned</div><div style="margin:10px 0 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:20px;line-height:1.55;color:#3b3d45;"><p data-pm-slice="1 1 []">This project helped me understand how different users can have completely different needs, even when they are using the same platform. I learned that good design isn't just about making an interface look nice, but also about understanding what information people actually need.</p></div></div>
+          <div style="border-top:1.5px solid #1c1d22;padding-top:16px;"><div style="font-family:'Courier Prime',monospace;font-size:14px;color:#5b6fa8;">What was hard</div><div style="margin:10px 0 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:20px;line-height:1.55;color:#3b3d45;"><p data-pm-slice="1 1 []">The biggest challenge was trying to meet everyone's expectations while keeping the design simple and easy to use. I received a lot of feedback throughout the process, and sometimes it was difficult to decide which ideas should be prioritized.</p><p></p></div></div>
+          <div style="border-top:1.5px solid #1c1d22;padding-top:16px;"><div style="font-family:'Courier Prime',monospace;font-size:14px;color:#5b6fa8;">Next steps</div><div style="margin:10px 0 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:20px;line-height:1.55;color:#3b3d45;"><p data-pm-slice="1 1 []">We are continuing to develop the project and preparing for usability testing. I'm also involved in planning the questionnaires and surveys. I'm looking forward to seeing how real users interact with the app and using their feedback to improve the design.</p></div></div>
+        </div>
+      </section>
+
+      <section id="app" data-screen-label="App design" style="padding-top:clamp(112px,13vw,176px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">The final design</div>
+        <h2 class="rv" style="font-family:'Figtree',sans-serif;font-weight:700;font-size:clamp(40px,6.4vw,88px);line-height:1;letter-spacing:-.02em;color:#5b6fa8;margin:16px 0 0;">The actual app</h2>
+        <p class="rv" style="font-size:18px;line-height:1.65;max-width:34em;margin:24px 0 0;color:#3b3d45;">Both sides start in the same app, then branch. Pick a side to see its screens.</p>
+        <div class="rv" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:32px;">
+          <a class="h7" href="#patient" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;box-sizing:border-box;padding:10px 22px;border-radius:999px;text-decoration:none;font-family:'Courier Prime',monospace;font-size:16px;background:#5b6fa8;color:#fff;border:1.5px solid #5b6fa8;"><span>View patient app</span><span aria-hidden="true">↓</span></a>
+          <a class="h8" href="#clinician" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;box-sizing:border-box;padding:10px 22px;border-radius:999px;text-decoration:none;font-family:'Courier Prime',monospace;font-size:16px;background:transparent;color:#1c1d22;border:1.5px solid #1c1d22;"><span>View clinician app</span><span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section id="patient" data-screen-label="Patient app" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Patient app</div>
+        <h2 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;max-width:16em;">Small wins, every day</h2>
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:56px 0 0;">Onboarding</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">Patients share their dominant hand and affected side, so the first plan fits.</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m01-splash.webp" alt="Splash" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Splash</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m03-role.webp" alt="Role selection" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Role selection</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m04-signup.webp" alt="Create account" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Create account</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m05-about.webp" alt="About you, hands" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">About you · hands</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m06-medical.webp" alt="Medical information" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Medical information</figcaption></figure>
+        </div>
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:72px 0 0;">Home</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">Today’s goals, hand scores and the latest clinician note, all on the first screen. I explored two home layouts: data-first and coach-first.</p>
+        <div class="rv home-row" style="display:flex;flex-wrap:wrap;gap:clamp(28px,4vw,56px);align-items:flex-start;margin-top:28px;">
+          <figure style="margin:0;flex:none;width:min(100%,280px);display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m11-home-data.webp" alt="Home, data layout" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">A. Home</figcaption></figure>
+          <div style="flex:1 1 280px;min-width:0;max-width:36em;"><aside class="note-slot" style="margin-top:0;max-width:36em;border:1.5px dashed #b9c4de;border-radius:12px;padding:16px 20px;background:rgba(255,255,255,.55);">
+          <div style="font-family:'Courier Prime',monospace;font-size:13px;color:#4a5d94;">✎ Design decision</div>
+          <p style="margin:8px 0 0;font-family:'Source Serif 4',serif;font-style:italic;font-size:17px;line-height:1.55;color:#6b6d76;">I decided to focus more on showing patients their progress and keeping them motivated. I wanted patients to see how much they’ve improved as soon as they open the app, instead of having to look through different pages. I also included a weekly streak tracker to encourage them to keep up with their exercises and build a habit of doing rehabilitation regularly.</p>
+        </aside></div>
+        </div>
+        
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:72px 0 0;">Training</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">Every exercise opens with a demo video, its benefits and step-by-step instructions. Patients choose Recommended (the clinician’s plan) or Practice (their own goal).</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 48px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m14-plan.webp" alt="Exercise plan" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Exercise plan · leaderboard</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 48px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m16-lemon.webp" alt="Lemon Squeeze detail" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Lemon Squeeze detail</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 48px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m21-feedback.webp" alt="Clinician feedback" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Clinician feedback</figcaption></figure>
+        </div>
+        
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:72px 0 0;">Report</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">Reports turn grip scores into trends against a target range. Streaks and badges reward showing up, and reports can be shared with the care team in one tap.</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m22-report.webp" alt="Report" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Report</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m25-share.webp" alt="Share report" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Share report</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m26-streak.webp" alt="Streak" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Streak</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m27-badges.webp" alt="Badges and leaderboard" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Badges &amp; leaderboard</figcaption></figure>
+        </div>
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:72px 0 0;">Profile</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">Recovery stats live in the profile, along with pairing the XREAL glasses.</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 48px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m28-profile.webp" alt="Profile" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Profile</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 48px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m33-pairing.webp" alt="Device pairing" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Device pairing</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 48px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m34-pair-new.webp" alt="Pair new device" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Pair new device</figcaption></figure>
+        </div>
+      
+        
+      </section>
+
+      <section id="clinician" data-screen-label="Clinician app" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Clinician app</div>
+        <h2 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;max-width:16em;">Who needs attention today?</h2>
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:56px 0 0;">Onboarding</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">Clinicians add their licence, job title and clinic, and are verified before any patient data is shared.</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m02-signin.webp" alt="Sign in" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Sign in</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m08-c-signup.webp" alt="Clinician sign up" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Create account</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m09-c-about.webp" alt="Clinician details" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">About you</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m10-c-practice.webp" alt="Practice information" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Practice information</figcaption></figure>
+        </div>
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:72px 0 0;">Home</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">A roster sorted by who’s falling behind. Each patient opens into an overview, trends, private notes and their full record.</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m38-patients.webp" alt="Patients" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Patients</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m40-overview.webp" alt="Patient overview" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Patient · overview</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m41-trends.webp" alt="Patient trends" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Patient · trends</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 72px) / 4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m46-note.webp" alt="Add clinical note" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Add clinical note</figcaption></figure>
+        </div>
+
+        <h3 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:72px 0 0;">Message</h3>
+        <p class="rv" style="font-size:19px;line-height:1.6;max-width:40em;margin:12px 0 0;color:#3b3d45;">One thread per patient, with quick replies for common answers and a plan builder for level and targets.</p>
+        <div class="strip rv" style="display:flex;gap:24px;align-items:flex-start;overflow-x:auto;margin-top:28px;padding:4px 2px 20px;scroll-snap-type:x proximity;">
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 57.599999999999994px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m48-messages.webp" alt="Messages" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Messages</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 57.599999999999994px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m49-conversation.webp" alt="Conversation" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Conversation</figcaption></figure>
+          <figure style="margin:0;flex:none;width:max(160px,calc((100% - 57.599999999999994px) / 3.4));display:flex;flex-direction:column;gap:12px;scroll-snap-align:start;"><img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m51-plan-builder.webp" alt="Plan builder" style="display:block;width:100%;height:auto;"><figcaption style="font-family:'Courier Prime',monospace;font-size:13px;color:#6b6d76;">Plan builder</figcaption></figure>
+        </div>
+
+        <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:48px 40px;margin-top:72px;align-items:start;">
+          <div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:0;">Insight</h3>
+            <p style="font-size:19px;line-height:1.6;margin:12px 0 0;color:#3b3d45;">Goal completion, streaks and weekly compliance across every patient.</p>
+            <img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m53-insights.webp" alt="Insights" style="display:block;width:min(100%,250px);height:auto;margin-top:28px;">
+          </div>
+          <div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(24px,2.6vw,30px);margin:0;">Profile</h3>
+            <p style="font-size:19px;line-height:1.6;margin:12px 0 0;color:#3b3d45;">Licence details, an audit log and clinical obligations in one place.</p>
+            <img class="ph" loading="lazy" decoding="async" src="assets/rehab/m/m54-c-profile.webp" alt="Clinician profile" style="display:block;width:min(100%,250px);height:auto;margin-top:28px;">
+          </div>
+        </div>
+        
+        <a class="rv" href="#patient" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:40px;font-family:'Courier Prime',monospace;font-size:15px;color:#4a5d94;">← Switch to the patient app</a>
+      </section>
+
+      <section id="testing" data-screen-label="Testing" style="padding-top:clamp(96px,11vw,144px);">
+        <div class="rv" style="font-family:'Courier Prime',monospace;font-size:14px;color:#4a5d94;">Testing &amp; iteration</div>
+        <h2 class="rv" style="font-family:'Source Serif 4',serif;font-weight:400;font-size:clamp(30px,3.6vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 0;max-width:16em;">What testing changed</h2>
+        
+        <div class="tst rv" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(24px,4vw,56px);margin-top:48px;align-items:start;">
+          <div><div style="font-family:'Source Serif 4',serif;font-size:40px;line-height:1;color:#5b6fa8;">01</div><div style="font-weight:600;font-size:21px;line-height:1.3;margin-top:14px;">Report charts needed explaining</div><p style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;">Testers weren’t sure how to read the trend line and history bars, so each chart now has a “What this shows” panel.</p></div>
+          <div style="display:flex;gap:12px;background:#dfe5f2;border-radius:18px;padding:16px;">
+            <img loading="lazy" decoding="async" src="assets/rehab/f-threshold.png" alt="Threshold chart with explanation" style="flex:1;min-width:0;max-height:340px;object-fit:contain;background:#fff;border-radius:12px;padding:10px;box-sizing:border-box;">
+            <img loading="lazy" decoding="async" src="assets/rehab/f-history.png" alt="History chart with explanation" style="flex:1;min-width:0;max-height:340px;object-fit:contain;background:#fff;border-radius:12px;padding:10px;box-sizing:border-box;">
+          </div>
+        </div>
+        <div class="tst rv" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(24px,4vw,56px);margin-top:64px;align-items:start;">
+          <div><div style="font-family:'Source Serif 4',serif;font-size:40px;line-height:1;color:#5b6fa8;">02</div><div style="font-weight:600;font-size:21px;line-height:1.3;margin-top:14px;">Add a baseline to measure against</div><p style="margin:12px 0 0;font-size:18px;line-height:1.65;color:#3b3d45;">A weekly Baseline Game now sits under Today’s Task, giving a steady reference point for progress.</p></div>
+          <div style="display:flex;justify-content:center;background:#dfe5f2;border-radius:18px;padding:16px;">
+            <img loading="lazy" decoding="async" src="assets/rehab/f-task.png" alt="Today’s task with the Baseline Game" style="max-width:100%;max-height:340px;object-fit:contain;background:#fff;border-radius:12px;padding:10px;box-sizing:border-box;">
+          </div>
+        </div>
+      </section>
+
+      
+    </main>
+  </div>
+
+  <footer style="max-width:1240px;margin:0 auto;padding:clamp(112px,13vw,176px) clamp(20px,4vw,48px) 56px;">
+    <a href="cseed.html" class="next-link" style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;text-decoration:none;color:#1c1d22;border-top:1px solid rgba(28,29,34,.15);padding-top:28px;">
+      <span><span style="display:block;font-family:'Courier Prime',monospace;font-size:14px;color:#6b6d76;">Next project</span><span style="display:block;font-family:'Source Serif 4',serif;font-size:clamp(36px,5vw,64px);line-height:1.05;margin-top:8px;">CSEED Website <span class="arr">→</span></span></span>
       <span style="font-family:'Courier Prime',monospace;font-size:14px;">fangriley6@gmail.com</span>
     </a>
   </footer>
 </div>
+<script>
+(function(){var root=document.documentElement;if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window))return;root.classList.add('rv-on');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});})();
+</script>
 </body>
 </html>
